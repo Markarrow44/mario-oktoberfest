@@ -1,0 +1,109 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include _includes/_header
+		main#main
+			section.section-order.paymant-from
+				.container
+					h1.hero-title.sm.text-center.text-md-start Zahlungs Informationen
+					.row
+						.col-acc.order-1.order-lg-0
+							.block-payment
+								form.payment-form(action="#")
+									.form-mobile-style
+										.payment-header
+											i.icon-card
+											span Payment
+										.payment-content
+											.payment-service
+												h6 Unsere Zahlungsarten
+											ul.d-flex
+												li
+													label(for="paypal")
+														input#paypal(type="checkbox")
+														span: img(src="./images/paypal.svg", width="68" , height="26" ,alt="paypal")
+												li
+													label(for="visa")
+														input#visa(type="checkbox")
+														span: img(src="./images/visa.svg", width="56" , height="30" ,alt="visa")
+												li
+													label(for="mastercard")
+														input#mastercard(type="checkbox")
+														span: img(src="./images/mastercard.svg", width="56" , height="30" ,alt="mastercard")
+												li
+													label(for="applepay")
+														input#applepay(type="checkbox")
+														span: img(src="./images/applepay.svg", width="56" , height="30" ,alt="applepay")
+											.row
+												.col-md-6
+													label(for="") Name auf der Karte
+													input(type="text" placeholder="Name auf der Karte") 
+												.col-md-6
+													label(for="") Kreditkartennummer
+													input(type="text" placeholder="Kreditkartennummer") 
+												.col-md-6
+													label(for="") MM/JJ
+													input(type="text" placeholder="MM/JJ") 
+												.col-md-6
+													label(for="") CVC
+													input(type="text" placeholder="CVC") 
+												.col-md-6
+													label(for="") ZIP
+													input(type="text" placeholder="ZIP")
+									button(type="submit").btn.btn-primary.d-block.d-lg-none Reservierungsanfrage
+						.col-sidebar
+							#js-sidebar-fixed
+								aside.sidebar
+									.card-user
+											.card-header
+												.d-flex.align-items-center
+													.col-logo
+														.user-logo: img(src="./images/user-logo.png", width="63" , height="63" ,alt="user logo")
+													.col-info
+														strong.user-name Dominik Pfeiffer
+														.user-email d.pfeiffer@linksderisar.com
+											.order-info.d-none.d-lg-block
+												ul.check-list
+													li.selected 
+														i.icon-check
+														span Augustiner Festzelt
+													li.selected 
+														i.icon-check
+														span Sa - 16.09. 2022
+													li.selected 
+														i.icon-check
+														span Mittag 13-15
+													li.selected 
+														i.icon-check
+														span Anzahl Personen
+													li.selected 
+														i.icon-check
+														span Bereich 11-12
+													li.selected 
+														i.icon-check
+														span 4 Bier und  ein Hendl pro Person
+													li.selected 
+														i.icon-check
+														span Dominik Dr Pfeiffer
+											.card-footer
+												ul.check-list
+													li.selected
+														i.icon-check
+														span Wiesn-Basic+
+												.coupon-code
+													label Gutschein
+													.d-flex
+														input.form-control(type="text" placeholder="Gutscheincode")
+														button.btn.btn-primary Einlösen
+												table.tabel-price.active
+													tr
+														td: i Summe ohne MwSt.
+														td: strong € 9,90
+													tr
+														td: i zzgl. 19% MwSt.
+														td: strong € 00,00
+													tr
+														td  Gesamtsumme
+														td: span € 9,90
+											button.btn.btn-primary.d-none.d-lg-block Reservierungsanfrage
+		include _includes/_footer

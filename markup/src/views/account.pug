@@ -1,0 +1,155 @@
+
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include ./_layout/_nav
+		header#header
+			.container
+				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
+					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
+					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.login-holder
+							.is-logged
+								.avatar: img(src="./images/icon/avatar.svg", alt="user")
+								.user-name Dominik Pfeiffer
+						.dropdown
+							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+								i.icon-lang
+								| Deutsch
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+								li
+									.fake-radio
+										input#en(type="radio" , name="lang")
+										label(for="en").dropdown-item 
+											span
+											| ENGLISCH
+								li
+									.fake-radio
+										input#de(type="radio" , name="lang")
+										label(for="de").dropdown-item 
+											span
+											| Deutsch
+					.toggle-btn-holder.order-2.order-md-1
+						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
+							span
+		main#main
+			section.section-order.paymant-from.account
+				.container
+					h1.hero-title.sm.text-center.text-md-start Dein Benutzerkonto
+					.row
+						.col-acc.order-lg-0
+							form.payment-form(action="#")
+								.block-payment
+									.form-mobile-style
+										.payment-header
+											i.icon-persone 
+											h4 Account  Details
+										.user-getdata
+											h6 Profilbild
+											ul.d-flex
+												li
+													span: img(src="./images/user-img-01.svg" width="69" height="79" )
+												li
+													span: img(src="./images/user-img-02.svg" width="55" height="79" )
+												li
+													span: img(src="./images/user-img-03.svg" width="84" height="71" )
+												li
+													span: img(src="./images/user-img-04.png" width="115" height="115" )
+											.row
+												.col-md-6
+													label Geschlecht
+													select.form-select#Geschlecht(name="Geschlecht")
+														option(selected) Weiblich
+														option Weiblich
+														option Mr
+														option Mrs
+														option Miss
+														option Ms
+														option Dr
+												.col-md-6
+													label Titel
+													select.form-select#titel(name="weiblich")
+														option(selected) Wählen Sie
+														option Titel
+														option Titel
+														option Titel
+														option Titel
+														option Titel
+														option Titel
+												.col-md-6
+													label(for="") Vorname*
+													input(type="text" placeholder="Vorname") 
+												.col-md-6
+													label(for="") Nachname*
+													input(type="text" placeholder="Nachname") 
+												.col-md-6
+													label(for="") Straße, Hausnummer
+													input(type="text" placeholder="Straße, Hausnummer") 
+												.col-md-6
+													label(for="") PLZ
+													input(type="text" placeholder="PLZ") 
+												.col-md-6
+													label(for="") Stadt
+													input(type="text" placeholder="Stadt")
+												.col-md-6
+													label(for="") Region
+													input(type="text" placeholder="Region")
+												.col-md-6
+													label(for="") E-Mail*
+													input(type="email" placeholder="E-Mail")
+												.col-md-6
+													label(for="") Telefon
+													input(type="text" placeholder="Telefon")
+												.col-md-6
+													label(for="") Firma
+													input(type="text" placeholder="Firma")
+												.col-md-6
+													label(for="") Abteilung
+													input(type="text" placeholder="Abteilung")
+								.block-payment
+									.form-mobile-style
+										.payment-header
+											i.icon-lock 
+											h4 Passwort
+										.user-getdata
+											.row
+												.col-md-6
+														label(for="") Aktuelles Passwort
+														.input-password
+															input(type="password" placeholder="Aktuelles Passwort")
+															span.toggle-pass-btn: i.icon-password
+												.col-md-6
+													
+												.col-md-6
+													label(for="") Neues Passwort
+													.input-password
+														input(type="password" placeholder="Neues Passwort") 
+														span.toggle-pass-btn: i.icon-password
+												.col-md-6
+													label(for="") Passwort bestätigen
+													.input-password
+														input(type="password" placeholder="Passwort bestätigen")
+														span.toggle-pass-btn: i.icon-password
+											.btn-holder
+												button(type="submit").btn.btn-primary Speichern
+						.col-sidebar
+							#js-sidebar-fixed
+								aside.sidebar
+									.widget
+										.widget-header.d-flex
+											.text
+												p Deine Mitgliedschaft
+												h3.h1 Wiesn-VIP
+											.img: img(src="./images/img-icon-02.svg", width="82" , height="88" , alt="image decription")
+										ul.widget-list
+											li
+												i.icon-check
+												p Eine kostenlose Erinnerung zur Öffnung des Reservierungsportals des Wiesn-Zeltes
+											li
+												i.icon-check
+												p Automatische Reservierungsanfrage in Wiesn-Zelten Deiner Wahl unmittelbar nach Öffnung des Reservierungsportals
+											li
+												i.icon-check
+												p Exclusive Erstinformation über vorhandene Tischkontingente und Last-Minute-Buchungen
+										a(href="#").btn.btn-primary Mitgliedschaft bearbeiten
+		include _includes/_footer	

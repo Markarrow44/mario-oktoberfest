@@ -1,0 +1,162 @@
+.block-payment {
+	border-radius: 8px;
+	margin-top: 12px;
+
+	@include media-breakpoint-up(lg) {
+		margin-top: 0;
+		padding: 24px;
+		background: #FFFFFF;
+		border: 1px solid #ECECEE;
+	}
+
+	.form-mobile-style {
+		border-radius: 8px;
+		
+		@include media-breakpoint-down(lg) {
+			margin-top: 0;
+			padding: 24px 22px 0;
+			background: #FFFFFF;
+			border: 1px solid #ECECEE;
+		}
+	}
+
+	h6 {
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: 8px;
+	}
+	
+
+	.payment-header {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: calc(28 / 20);
+
+		h4 {
+			margin-bottom: 0;
+		}
+
+		i {
+			margin-right: 10px;
+			font-size: 16px;
+
+			@include media-breakpoint-up(lg) {
+				margin-right: 18px;
+			}
+		}
+	}
+
+	.payment-content {
+		padding-top: 24px;
+
+		@include media-breakpoint-up(lg) {
+			padding: 34px 40px 0;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0 0 16px 0;
+			list-style: none;
+
+			@include media-breakpoint-up(lg) {
+				margin: 0 0 40px 0;
+			}
+
+			li {
+				+ li {
+					margin-left: 16px;
+				}
+			}
+
+			input {
+				position: absolute;
+				left: -99999px;
+				z-index: 1;
+				opacity: 0;
+
+				&:checked {
+					+ span {
+						border-color: $primary;
+					}
+				}
+
+				+ span {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 70px;
+					height: 43px;
+					padding: 5px;
+					background: #FFFFFF;
+					border: 1px solid #ECECEE;
+					border-radius: 4px;
+					transition: .4s all;
+					cursor: pointer;
+
+					@include media-breakpoint-up(lg) {
+						width: 81px;
+						height: 50px;
+					}
+
+					&:hover {
+						box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+					}
+				}
+			}
+		}
+	}
+
+	.row {
+		margin: 0 -10px;
+
+		[class*="col-"] {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.col-btn {
+			margin-bottom: 0;
+
+			.btn-holder {
+				padding: 10px 0 26px 0;
+				
+				@include media-breakpoint-down(lg) {
+					padding: 0;
+					margin: 0 -24px;
+				}
+			}
+		}
+	}
+
+	input {
+		width: 100%;
+	}
+
+	.btn-holder {
+		padding: 10px 0 16px 20px;
+		
+		@include media-breakpoint-down(lg) {
+			padding: 0;
+			margin: 0 -24px;
+		}
+	}
+
+	.btn {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 8px;
+
+		@include media-breakpoint-down(lg) {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			border-radius: 0 0 8px 8px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-top: 0;
+		}
+	}
+}

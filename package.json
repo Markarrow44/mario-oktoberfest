@@ -1,0 +1,67 @@
+{
+  "version": "2.1.12",
+  "name": "generator-p2h-custom",
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman-generator",
+    "webpack",
+    "p2h",
+    "psd2html",
+    "twig",
+    "pug"
+  ],
+  "dependencies": {
+    "assert": "^2.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.2.0",
+    "chai-exec": "^2.0.4",
+    "chalk": "^4.0.0",
+    "choices.js": "^10.2.0",
+    "cross-env": "^7.0.2",
+    "husky": "^5.0.9",
+    "lint-staged": "^10.2.2",
+    "lodash.merge": "^4.6.2",
+    "lottie-web": "^5.10.1",
+    "mocha": "^8.0.1",
+    "moment": "^2.29.4",
+    "prepend-file": "^2.0.0",
+    "sticky-sidebar": "^3.3.1",
+    "update-notifier": "^5.1.0",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-generator": "^4.13.0",
+    "yeoman-test": "^6.3.0",
+    "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "core-js": "^3.6.5",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "test:files": "cross-env FILES_ONLY=true mocha test/index.js -S --timeout 0",
+    "test": "mocha -S --timeout 0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": "mrlss/generator-scaffolder",
+  "license": "MIT"
+}

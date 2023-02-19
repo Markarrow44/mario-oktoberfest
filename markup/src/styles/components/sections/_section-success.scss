@@ -1,0 +1,160 @@
+.section-success {
+	padding: 18px 0 56px 0;
+
+	@include media-breakpoint-up(md) {
+		padding: 32px 0 56px 0;
+	}
+	
+	h1 {
+		margin-bottom: 24px;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 24px;
+		}
+	}
+
+	.inner {
+		background: #FFFFFF;
+		border: 1px solid #ECECEE;
+		border-radius: 8px;
+		text-align: center;
+		padding: 40px 17px 0;
+
+		@include media-breakpoint-up(md) {
+			padding: 48px;
+		}
+
+		p {
+			font-size: 18px;
+			line-height: calc(28 / 18);
+			margin-bottom: 48px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 16px;
+				line-height: calc(28 / 16);
+				margin-bottom: 24px;
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+
+		.btn {
+			max-width: 608px;
+			width: 100%;
+
+			@include media-breakpoint-down(md) {
+				display: block;
+				border-radius: 0 0 8px 8px;
+				max-width: none;
+				width: auto;
+				margin: 0 -17px;
+			}	
+		}
+	}
+}
+
+.card-success {
+	max-width: 673px;
+	margin: 0 auto 24px;
+	background: #FFFFFF;
+	border: 1px solid #ECECEE;
+	border-radius: 8px;
+	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+	}
+
+	.card-content {
+		padding: 16px 16px 20px 16px;
+		
+		@include media-breakpoint-up(md) {
+			padding: 9px 31px 22px;
+		}
+	}
+
+	h4 {
+		margin-bottom: 36px;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 20px;
+		}
+	}
+
+	.img {
+		position: relative;
+		height: 120px;
+
+		@include media-breakpoint-up(md) {
+			height: 82px;
+		}
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.card-list {
+		display: block;
+
+		@include media-breakpoint-up(md) {
+			display: table;
+			width: 100%;
+		}
+
+		td {
+			padding: 6px 0;
+
+			@include media-breakpoint-down(md) {
+				display: block;
+			}
+		}
+
+		.li {
+			display: flex;
+			align-items: center;
+
+			@include media-breakpoint-up(md) {
+				padding-right: 10px;
+			}
+		}
+
+		i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			min-width: 24px;
+			min-height: 24px;
+			margin-right: 16px;
+			background-color: $primary;
+			font-size: 9px;
+
+			&::before {
+				margin-top: 2px;
+			}
+		}
+
+		span {
+			font-size: 16px;
+			line-height: calc(28 / 16);
+		}
+	}
+}
+
+#svgContainer {
+	max-width: 178px;
+	margin: 0 auto 24px;
+
+	@include media-breakpoint-up(md) {
+		max-width: 372px;
+	}
+}

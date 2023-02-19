@@ -1,0 +1,27 @@
+.modal.fade#register(tabindex="-1" aria-hidden="true" aria-modal="true")
+	.modal-dialog
+		.block-modal-register
+			.heading
+				a(href="#") Oktoberfest Booking
+				h2 Registrieren
+			.btn-group
+				a(href="#").btn.btn-primary 
+					img(src="./images/icon/facebook.svg", width="25" , height="25" , alt="Facebook")
+					span Continue with Facebook
+				a(href="#").btn.btn-light 
+					img(src="./images/icon/google.svg", width="23" , height="23" , alt="Facebook")
+					span Continue with Google
+			.divider: span oder
+			form(action="#") 
+				.form-inner
+					.row
+						.col-12
+							label(for="email") Email Adresse
+							input#email(type="email" placeholder="Email Adresse") 
+						.col-12
+							label(for="passwort") Passwort 
+							input#passwort(type="text" placeholder="Passwort")
+						.col-12
+							label(for="pass") Passwort  bestätigen 
+							input#pass(type="text" placeholder="Passwort  bestätigen ")
+				button.btn.btn-primary Registrieren

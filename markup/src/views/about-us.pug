@@ -1,0 +1,135 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include ./_layout/_registration
+		include ./_layout/_nav
+		header#header
+			.container
+				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
+					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
+					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.item-text-icon
+							.img: img(src="./images/img-icon-02.svg", width="40" , height="38" , alt="Werde Wiesn-VIP")
+							strong Werde Wiesn<span>-VIP</span>
+						.login-holder.dropdown
+							.is-logged#dropdownMenuButton2(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+								.avatar: img(src="./images/icon/avatar.svg", alt="user")
+								.user-name Dominik Pfeiffer
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton2')
+									li
+										a(href="#").d-flex.align-items-center
+											i.icon-persone
+											span Benutzerkonto
+									li
+										a(href="#").d-flex.align-items-center
+											.img.warning
+												<img src="./images/img-icon-02.svg" width="23" height="29" alt="Werde Wiesn-VIP">
+												<img class="hover" src="./images/img-icon-03.svg" width="23" height="29" alt="Werde Wiesn-VIP">
+											span Werde Wiesn VIP
+									li
+										a(href="#").d-flex.align-items-center
+											i.icon-subsc
+											span Abmeldung
+						.dropdown
+							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+								i.icon-lang
+								| Deutsch
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+								li
+									.fake-radio
+										input#en(type="radio" , name="lang")
+										label(for="en").dropdown-item 
+											span
+											| ENGLISCH
+								li
+									.fake-radio
+										input#de(type="radio" , name="lang")
+										label(for="de").dropdown-item 
+											span
+											| Deutsch
+					.toggle-btn-holder.order-2.order-md-1
+						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
+							span
+		main#main
+			section.section-hero.section-hero-lg
+				.container
+					.inner
+						.img.img-overlay
+							img(src="./images/hero-img-06.jpg"  alt="images description")
+						h1.hero-title Oktoberfest Booking
+						a(href="#reservation").btn.btn-primary Kontaktieren Sie Uns
+			section.section-scrollspy.with-card-img
+				.container
+					.scrollspy-list
+						.card-scrollspy.img-lg
+							.row
+								.inner.d-flex.flex-wrap
+									.col-text
+										.card-text
+											h4 Wir sind ein Team von begeisterten Wiesn-Gängern und haben uns zum Ziel gesetzt das berühmteste Volksfest der Welt zu digitalisieren. 
+											.collapse-wrap
+												p Als Gründer einer Digitalagentur ist es stets unser Bestreben gewesen alltägliche Dinge digital zu denken und sie entsprechend zu entwickeln. Genau dies haben wir auch im Umfeld der Wiesn getan als wir 2017 unser erstes digitales Reservierungssystem mit integriertem Payment im Marstall Festzelt einführen durften. Seitdem hat sich sehr viel getan und wir konnten viele Wiesn-Wirte als Kunden gewinnen, weshalb wir im Jahr 2022 die Festzelt OS als eigenständige Einheit gegründet haben.
+									.col-card
+										.card-info-place
+											.card-image.d-block
+												img(src="./images/card-img-09.jpg", width="476" , height="370" , alt="image description")
+					.scrollspy-list
+						.card-scrollspy
+							.row
+								.inner.d-flex.flex-wrap
+									.col-text
+										.card-text
+											h2 Das Festzelt
+											.collapse-wrap
+												p Festzelt OS ist das cloudbasierte Reservierungssystem für Festzelte: Das Festzelt OS kann den gesamten Workflow eines Reservierungsbüros abbilden: Tische und ihre Verfügbarkeit anzeigen, Rechnungen und Buchungsbestätigungen versenden, Verzehrgutscheine verwalten und vor Ort den Einlass koordinieren. Neben der eigentlichen Reservierungslösung bietet Festzelt OS eine Vielzahl an weitere Lösungen rund um das Management eine Festzeltbetriebes ab: z.B. Individuelle Apps für Festzelte, Personalmanagement-Tools oder Kontoführungstools. Sprechen Sie uns gerne zu unseren Lösungen an.
+									.col-card
+										.card-info-place
+											.card-image.d-flex
+												img(src="./images/card-img-07.jpg", width="457" , height="341" , alt="image description")
+												.card-logo: img(src="./images/festwiese-os_logo.svg", width="93" , height="101" alt="fest zelt")
+											.card-content.d-none.d-md-block
+												.collapse-item
+													a(href=""  role="button" aria-expanded="false")
+														i.icon-chevron-down-radius
+														| Festzelt OS
+					.scrollspy-list
+						.card-scrollspy
+							.row
+								.inner.d-flex.flex-wrap
+									.col-text
+										.card-text
+											h2 Oktoberfest Booking
+											.collapse-wrap
+												p Oktoberfest Booking ist das erste zentrale Buchungsportal für Tische am Oktoberfest. Reservierungsanfragen werden hierbei direkt an das jeweilige Festzelt weitergeleitet und von diesem auch bearbeitet. Oktoberfest Booking ist daher kein Vermittler von Tischen von Dritten (z.B. Agenturen, Reisebüros, Händler, o.ä.), sondern ein zentraler Aggregator. Die jeweiligen Tischanfragen werden von den entsprechenden Zelten direkt über unsere Reservierungslösung Festzelt OS bearbeitet. Aus diesem Grund haben wir leider auch keinen Einfluss auf etwaige Zu- oder Absagen von einzelnen Reservierungswünschen
+									.col-card
+										.card-info-place
+											.card-image.d-block
+												img(src="./images/card-img-08.jpg", width="457" , height="341" , alt="image description")
+			section.section-banner.fw
+				.container
+					.inner(style="background-image: url('./images/img-banner-02.png');")
+						.text-holder
+							.heading
+								h2.h1 Unsere Kunden und Partner
+								p Wir dürfen die schönsten Festzelte mit den tollsten Wirten:innen zu unseren Kunden zählen.
+						.swiper.js-brands-slider(style="background: #4090E7")
+							// Additional required wrapper
+							.swiper-wrapper
+								// Slides
+								.swiper-slide.item: a(href="#"):  img(src="./images/schuetzen-festzelt-logo.svg", alt="schuetzen festzelt")
+								.swiper-slide.item: a(href="#"):  img(src="./images/fischer-vroni-logo.svg", alt="fischer vroni")
+								.swiper-slide.item: a(href="#"):  img(src="./images/rischart-Logo.svg", alt="rischart")
+								.swiper-slide.item: a(href="#"):  img(src="./images/weiss-paulaner-festzelt-logo.svg", alt="weiss-paulaner festzelt")
+								.swiper-slide.item: a(href="#"):  img(src="./images/marstall-logo.svg", alt="marstall logo")
+								.swiper-slide.item: a(href="#"):  img(src="./images/augustiner-logo.svg", alt="augustiner logo")
+								.swiper-slide.item: a(href="#"):  img(src="./images/schottenhamel-logo.svg", alt="schottenhamel logo")
+			section.section-team
+				.container
+					h2.text-center.text-md-start Das Team
+					.row
+						.col-12.col-lg
+							.img: img(src="./images/img-04.jpg", alt="image description")
+						.col-12.col-md
+							.img.img-sm: img(src="./images/img-05.jpg", alt="image description")
+							.img.img-sm: img(src="./images/img-05.jpg", alt="image description")
+		include _includes/_footer

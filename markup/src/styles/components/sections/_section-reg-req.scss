@@ -1,0 +1,60 @@
+.section-reg-req {
+	padding-bottom: 56px;
+
+	.heading {
+		margin-bottom: 16px;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 24px;
+		}
+
+		.img {
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			font-weight: 600;
+			font-size: 26px;
+			line-height: 1;
+
+			@include media-breakpoint-up(md) {
+				font-size: 38px;
+				line-height: calc(40 / 38);
+			}
+		}
+	}
+
+	.inner {
+		@include media-breakpoint-up(md) {
+			padding: 24px 17px 53px;
+			background: #FFFFFF;
+			border: 1px solid #ECECEE;
+			border-radius: 8px;
+		}
+
+		.inner-mobile {
+			@include media-breakpoint-down(md) {
+				padding: 18px 17px 32px;
+				background: #FFFFFF;
+				border: 1px solid #ECECEE;
+				border-radius: 8px;
+			}
+		}
+
+		> .btn {
+			display: block;
+			margin-top: 24px;
+			max-width: 624px;
+			margin: 24px auto 0;
+			font-size: 20px;
+			padding-top: 14px;
+			padding-bottom: 14px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 18px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+		}
+	}
+}

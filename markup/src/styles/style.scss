@@ -1,0 +1,70 @@
+// 1. Configuration and helpers
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+
+// 2. Vendors
+@import 'vendors/bootstrap-utilities';
+@import 'abstracts/rebuilded-mixins';
+@import 'vendors/bootstrap';
+@import 'vendors/iconmoon';
+@import 'abstracts/mixins';
+@import 'vendors/choices';
+@import 'swiper/swiper-bundle.min.css';
+
+// 3. Base styles and elements
+@import 'base/base';
+@import 'base/helpers';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/forms';
+
+// 4. Layout-related sections
+@import 'layout/header';
+@import 'layout/common';
+@import 'layout/footer';
+
+// 5. Components
+@import 'components/sections/section-hero-home';
+@import 'components/sections/section-filters';
+@import 'components/sections/section-banner';
+@import 'components/sections/section-acc';
+@import 'components/sections/section-cards';
+@import 'components/sections/section-hero';
+@import 'components/sections/section-reservation';
+@import 'components/sections/section-scrollspy';
+@import 'components/sections/section-order';
+@import 'components/sections/section-sub-form';
+@import 'components/sections/section-auto-reserv';
+@import 'components/sections/section-subscr-done';
+@import 'components/sections/section-two-col';
+@import 'components/sections/section-reg-req';
+@import 'components/sections/section-success';
+@import 'components/sections/section-team';
+@import 'components/sections/section-advantages';
+@import 'components/sections/section-price';
+@import 'components/sections/section-hero-gradient';
+
+@import 'components/button';
+@import 'components/filter-panel';
+@import 'components/card-order';
+@import 'components/filter-nav-opener';
+@import 'components/nav-links';
+@import 'components/card-user';
+@import 'components/nav-checkout';
+@import 'components/card-two-col';
+@import 'components/add-action-btn';
+@import 'components/card-res';
+@import 'components/block-payment';
+@import 'components/block-modal-register';
+@import 'components/nav';
+@import 'components/button-link';
+@import 'components/widget';
+
+
+// 6. Page-specific styles
+// @import 'pages/home';
+
+// 7. Themes
+// @import 'themes/themes';
+
+

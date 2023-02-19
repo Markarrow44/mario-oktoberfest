@@ -1,0 +1,86 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include ./_layout/_nav
+		header#header
+			.container
+				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
+					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
+					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.login-holder
+							.is-logged
+								.avatar: img(src="./images/icon/avatar.svg", alt="user")
+								.user-name Dominik Pfeiffer
+						.dropdown
+							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+								i.icon-lang
+								| Deutsch
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+								li
+									.fake-radio
+										input#en(type="radio" , name="lang")
+										label(for="en").dropdown-item 
+											span
+											| ENGLISCH
+								li
+									.fake-radio
+										input#de(type="radio" , name="lang")
+										label(for="de").dropdown-item 
+											span
+											| Deutsch
+					.toggle-btn-holder.order-2.order-md-1
+						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
+							span
+		main#main
+			section.section-order.paymant-from.account
+				.container
+					h1.hero-title.sm.text-center.text-md-start Kontakt
+					.row
+						.col-acc
+							form.payment-form(action="#")
+								.block-payment.block-contact
+									.heading-content
+										strong Noch Fragen?
+										h2.h1 Kontaktieren Sie uns gerne.
+									.payment-header
+											.row
+												.col-md-6
+													label(for="") Vorname
+													input(type="text" placeholder="Vorname") 
+												.col-md-6
+													label(for="") Nachname
+													input(type="text" placeholder="Nachname") 
+												.col-md-6
+													label(for="") E-Mail*
+													input(type="email" placeholder="E-Mail") 
+												.col-md-6
+													label(for="") Telefonnummer
+													input(type="text" placeholder="Telefonnummer") 
+												.col-md-12
+													label(for="") Nachricht*
+													textarea(name="", cols="30", rows="10"  placeholder="Nachricht")
+												.col-md-12
+													label(for="agree").checkbox
+														input#agree(type="checkbox", name="agree")
+														span Ich bin damit einverstanden, dass meine Daten für die Kontaktaufnahme gespeichert werden.
+												.col-12.col-btn
+													.btn-holder
+														button(type="submit").btn.btn-primary Nachricht senden
+						.col-sidebar
+							#js-sidebar-fixed
+								aside.sidebar
+									.widget.widget-user
+										.widget-header.d-flex
+											.text.user-info
+												p Geschäftsführer
+												h2.d-none.d-md-block Dr. Dominik Pfeiffer
+											.img: img(src="./images/user-img-04.png", width="82" , height="88" , alt="image decription")
+											h2.d-md-none Dr. Dominik Pfeiffer
+										ul.user-contact
+											li: a(href="tel:49089540455720") 
+												i.icon-phone
+												span +49-(0)89-5404557-20
+											li: a(href="mailto:d.pfeiffer@airlst.com") 
+												i.icon-email
+												p d.pfeiffer@airlst.com
+		include _includes/_footer	

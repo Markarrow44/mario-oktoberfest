@@ -1,0 +1,106 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include ./_layout/_nav
+		header#header
+			.container
+				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
+					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
+					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.login-holder
+							a(href="#" data-bs-toggle="modal" data-bs-target="#register").link Login
+							//- .is-logged
+							//- 	.avatar: img(src="./images/icon/avatar.svg", alt="user")
+							//- 	.user-name Dominik Pfeiffer
+						.dropdown
+							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+								i.icon-lang
+								| Deutsch
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+								li
+									.fake-radio
+										input#en(type="radio" , name="lang")
+										label(for="en").dropdown-item 
+											span
+											| ENGLISCH
+								li
+									.fake-radio
+										input#de(type="radio" , name="lang")
+										label(for="de").dropdown-item 
+											span
+											| Deutsch
+					.toggle-btn-holder.order-2.order-md-1
+						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
+							span
+		main#main
+			section.section-hero.section-hero-sm
+				.container
+					.inner
+						.img
+							img(src="./images/hero-img-05.jpg"  alt="images description")
+						.hero-heading.text-center
+							h1.hero-title.lg Herzlich Willkommen
+							p Dominik Pfeiffer
+			section.section-two-col
+				.container
+					.row
+						.col-content
+							.tab-holder
+								ul#myTab.nav.nav-tabs(role='tablist')
+									li.nav-item(role='presentation')
+										button#home-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#erinnerungsfunktion' type='button' role='tab' aria-controls='erinnerungsfunktion' aria-selected='true')
+											i.icon-alarm
+											span Erinnerungsfunktion
+											.counter 1
+								#myTabContent.tab-content
+									#erinnerungsfunktion.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab' tabindex='0')
+										.text-content.text-center
+											h4 Erinnerung bei Öffnung des Reservierungsportals
+											p Die Festzelte öffnen Ihre Reservierungsportale meistens im ersten Quartal (Januar - März) des jeweiligen Jahres. Mit Öffnung des Reservierungsportals nimmt das Festzelt Reservierungsanfragen an. Mit diesem Reminder informieren wir Sie über den Zeitpunkt der Öffnung des Portals.
+										.card-two-col
+											button.btn-close
+												.icon-cross
+											.card-inner.d-md-flex
+												.col-main
+													.card-heading
+														.img: img(src="./images/img-time.svg", width="48" , height="46" , alt="image decription")
+														h4 Paulaner Festzelt
+													.card-sub-heading.text-center.text-md-start
+														sapn.d-block.d-md-inline Erinnerungsfunktion an: 
+														a(href="mailto:d.pfeiffer@linksderisar.com") d.pfeiffer@linksderisar.com
+													.text-center.text-md-start
+														p Du willst auf Nummer sicher gehen? Für € 9,90 kümmern wir uns um die Reservierungs-anfrage. Du must nur das Formular ausfüllen und den Rest machen wir für dich.
+													ul.list-state
+														li.success
+															i.icon-check
+															p Erinnerungsfunktion aktiv 
+														li
+															i.icon-cross
+															p.d-none.d-md-block Automatische Reservierungsanfrage
+															p.d-md-none Aut. Reservierungsanfrage
+												.col-secondary.text-center(style="background-image: url('./images/card-bg-01.png')")
+													.card-logo: img(src="./images/weiss-paulaner-festzelt-logo-p-500.svg", width="91" , height="75", alt="weiss paulaner festzel")
+													.price-block
+														strong.price € 9,90 
+														p Einmalige Zahlung
+													a(href="#").btn.btn-light Aktivieren
+						.col-sidebar
+							aside.sidebar
+								.widget
+									.widget-header.d-flex
+										.text
+											p Deine Mitgliedschaft
+											h2.h1 Wiesn-VIP
+										.img: img(src="./images/img-icon-02.svg", width="82" , height="88" , alt="image decription")
+									ul.widget-list
+										li
+											i.icon-check
+											p Eine kostenlose Erinnerung zur Öffnung des Reservierungsportals des Wiesn-Zeltes
+										li
+											i.icon-check
+											p Automatische Reservierungsanfrage in Wiesn-Zelten Deiner Wahl unmittelbar nach Öffnung des Reservierungsportals
+										li
+											i.icon-check
+											p Exclusive Erstinformation über vorhandene Tischkontingente und Last-Minute-Buchungen
+									a(href="#").btn.btn-primary Mitglied werden
+		include _includes/_footer

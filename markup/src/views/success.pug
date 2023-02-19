@@ -1,0 +1,73 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include ./_layout/_nav
+		header#header
+			.container
+				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
+					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg",width="148" , height="50" , alt="oktoberfest booking.com")
+					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.login-holder
+							.is-logged
+								.avatar: img(src="./images/icon/avatar.svg", alt="user")
+								.user-name Dominik Pfeiffer
+						.dropdown
+							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+								i.icon-lang
+								| Deutsch
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+								li
+									.fake-radio
+										input#en(type="radio" , name="lang")
+										label(for="en").dropdown-item 
+											span
+											| ENGLISCH
+								li
+									.fake-radio
+										input#de(type="radio" , name="lang")
+										label(for="de").dropdown-item 
+											span
+											| Deutsch
+					.toggle-btn-holder.order-2.order-md-1
+						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
+							span
+		main#main
+			section.section-success
+				.container
+					.inner
+						h1 Reservierung erfolgreich
+						#svgContainer
+						.card-success
+							.card-img
+								.img: img(src="./images/hero-img-04.jpg", alt="image description")
+							.card-content
+								h4 Reservierung Übersicht
+								
+								table.card-list
+									tr
+										td: .li
+											i.icon-check
+											span Dominik Pfeiffer
+									
+										td: .li
+											i.icon-check
+											span 18.09.2023
+									
+										td: .li
+											i.icon-check
+											span Paulaner Festzelt
+									tr
+										td: .li
+											i.icon-check
+											span 20 Personen
+									
+										td: .li
+											i.icon-check
+											span Mittagsschicht , 12-15 Uhr
+									
+										td: .li
+											i.icon-check
+											span Hausbox
+						p Wir haben dir ein Confirmation E-Mail an <a href="mailto:d.pfeiffer@linksderisar.com">d.pfeiffer@linksderisar.com</a> gesendet.<br>  Bitte prüfen Sie Ihre E-Mail.
+						a(href="#").btn.btn-primary Meine Reservierungs
+		include _includes/_footer	

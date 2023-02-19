@@ -1,0 +1,70 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include ./_layout/_nav
+		header#header
+			.container
+				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
+					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
+					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.login-holder
+							a(href="#" data-bs-toggle="modal" data-bs-target="#register").link Login
+							//- .is-logged
+							//- 	.avatar: img(src="./images/icon/avatar.svg", alt="user")
+							//- 	.user-name Dominik Pfeiffer
+						.dropdown
+							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+								i.icon-lang
+								| Deutsch
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+								li
+									.fake-radio
+										input#en(type="radio" , name="lang")
+										label(for="en").dropdown-item 
+											span
+											| ENGLISCH
+								li
+									.fake-radio
+										input#de(type="radio" , name="lang")
+										label(for="de").dropdown-item 
+											span
+											| Deutsch
+					.toggle-btn-holder.order-2.order-md-1
+						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
+							span
+		main#main
+			section.section-hero.section-hero-sm
+				.container
+					.inner
+						.img
+							img(src="./images/hero-img-04.jpg"  alt="images description")
+						h1.hero-title.lg Paulaner Festzelt
+			section.section-sub-form
+				.container
+					.inner
+						.d-lg-flex
+							.col-img
+								img(src="./images/clock.svg", width="83" , height="86" , alt="image decription")
+							.col-form
+								h2 Erinnerungsfunktion
+								form(action="#").form-subscr
+									.row
+										.col-lg-4
+											label(for="name").d-lg-none Ihre Name
+											input#name(type="text", placeholder="name")
+										.col-lg-4
+											label(for="E-Mail").d-lg-none E-Mail
+											input(type="email", placeholder="Email")
+										.col-lg-4
+											button.btn.btn-primary Erinnerungsfunktion setzen
+			section.section-auto-reserv
+				.container
+					.inner
+						.d-lg-flex.align-items-center
+							.col-img
+								<img src="./images/img-icon-01.svg" width="164" height="196" alt="image description">
+							.col-text.text-center.text-lg-start
+								h2 Automatische Reservierungsanfrage
+								p Du willst auf Nummer sicher gehen? Für <mark>€ 9,90</mark> kümmern wir uns darum, dass deine Reservierungsanfrage verschickt wird, sobald das Portal geöffnet ist. Du kannst jetzt gleich das Formular ausfüllen und brauchst im Anschluss nichts mehr machen. Wir erledigen alles für dich.
+								a(href="#").btn.btn-primary Zur aut. Reservierungsanfrage 
+		include _includes/_footer

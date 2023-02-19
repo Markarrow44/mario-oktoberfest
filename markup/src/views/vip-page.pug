@@ -1,0 +1,105 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include ./_layout/_registration
+		include ./_layout/_nav
+		header#header
+			.container
+				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
+					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
+					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.item-text-icon
+							.img: img(src="./images/img-icon-02.svg", width="40" , height="38" , alt="Werde Wiesn-VIP")
+							strong Werde Wiesn<span>-VIP</span>
+						.login-holder
+							a(href="#" data-bs-toggle="modal" data-bs-target="#register").link Login
+							//- .is-logged
+							//- 	.avatar: img(src="./images/icon/avatar.svg", alt="user")
+							//- 	.user-name Dominik Pfeiffer
+						.dropdown
+							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+								i.icon-lang
+								| Deutsch
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+								li
+									.fake-radio
+										input#en(type="radio" , name="lang")
+										label(for="en").dropdown-item 
+											span
+											| ENGLISCH
+								li
+									.fake-radio
+										input#de(type="radio" , name="lang")
+										label(for="de").dropdown-item 
+											span
+											| Deutsch
+					.toggle-btn-holder.order-2.order-md-1
+						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
+							span
+		main#main
+			section.section-hero-gradient
+				.container
+					.inner
+						.content
+							h1.hero-title.lg Wiesn-VIP
+							p Durch eine Mitgliedschaft in unserem Oktoberfest-Booking Premium-Programm stehen Ihnen alle kostenpflichtigen Services, wie der Festzelt-Wecker, die automatischen Reservierungsanfragen oder Last-Minute-Buchungen ohne weitere Zusatzkosten zur Verfügung. So verpassen Sie nie wieder Ihre rechtzeitigen Buchungen für Tische auf dem Oktoberfest und können die Wiesn noch besser genießen.
+						.col-list
+							ul.list
+								li: div
+									i.icon-check
+									h4 Festzelt-Wecker
+								li: div
+									i.icon-check
+									h4 Aut. Reservierungsfunktion
+								li: div
+									i.icon-check
+									h4 Buchung von Restkontingenten
+								li: div
+									i.icon-check
+									h4 Last Minute Reservierungen
+			section.section-price
+				.container
+					.row
+						.col-text
+							.text
+								h2 Kosten
+								stronog.price € 49,90 <span>pro Jahr</span>
+								p Die Gebühr für die jährliche Oktoberfest-Booking Premium-Mitgliedschaft beträgt nur  <span>49 Euro pro Jahr </span> und ist nicht übertragbar. D.h. Reservierungsanfragen können nur auf den Namen des Mitglieds erfolgen und sind nicht übertragbar.
+						.col-img
+							.img: img(src="./images/img-01.svg", width , height="" , alt="image description")
+			section.section-advantages
+				.container
+					.heading
+						h2 Alle Vorteile auf einen Blick
+						p Folgende Premiumfunktionen können Sie als Mitglied ohne weitere Zusatzgebühren nutzen:
+					.row
+						.col-md-6
+							.card-adv
+								.card-header
+									.img: img(src="./images/email-lg.svg", width="243", height="163", alt="image description")
+								.card-content
+									h3 Festzelt-Wecker
+									p Jedes Festzelt öffnet sein Reservierungsportal zu unterschiedlichen Zeitpunkten. Je schneller Sie Ihre Reservierung beim Festzelt einreichen, desto wahrscheinlicher ist es, dass Sie einen Tisch zu dem gewünschten Zeitpunkt erhalten. Der Festzelt-Wecker benachrichtigt Sie real-time, wenn das entsprechende Festzelt das Reservierungsportal öffnet. Im Rahmen der Oktoberfest-Booking Premium-Mitgliedschaft können Sie für beliebig viele Festzelte (oder alle) die Erinnerungsfunktion (den Festzelt-Wecker) aktivieren.
+						.col-md-6
+							.card-adv
+								.card-header
+									.img: img(src="./images/email-lg.svg", width="243", height="163", alt="image description")
+								.card-content
+									h3 Automatische Reservierungsfunktion
+									p Die einzelnen Festzelte erhalten viel mehr Reservierungsanfragen als sie bedienen können. D.h. es ist in vielen Fällen (vor allem an den Abenden) sehr schwer einen entsprechenden Tisch zu bekommen. Die Wahrscheinlichkeit auf einen Tisch erhöht sich je schneller sie ihr Reservierungsanfrage beim Festzelt einreichen. Mit der automatischen Reservierungsfunktion können Sie Ihre Reservierung schon anlegen, bevor das Festzelt überhaupt das Reservierungsportal eröffnet hat. Sobald das Festzelt das Reservierungsportal eröffnet, leiten wir Ihre Reservierungsanfrage automatisiert an das Festzelt weiter. Im Rahmen Ihrer Oktoberfest-Booking Premium-Mitgliedschaft können Sie mehrere automatische Reservierungsanfragen für unterschiedliche Festzelte erstellen.
+						.col-md-6
+							.card-adv
+								.card-header
+									.img: img(src="./images/email-lg.svg", width="243", height="163", alt="image description")
+								.card-content
+									h3 Buchung von Restkontingenten
+									p Die Reservierungen von Tischen am Oktoberfest werden erst mit Zahlung der Reservierungsgebühr verbindlich. Ein geringer Teil der Reservierungen wird nicht bezahlt, woraus jedes Jahr geringe Restkontingente entstehen. Im Rahmen Ihrer Oktoberfest-Booking Premium-Mitgliedschaft informieren wir sie real-time über diese Restkontingente, wodurch sich ihr Chance auf eine Reservierung am Oktoberfest erhöht.
+						.col-md-6
+							.card-adv
+								.card-header
+									.img: img(src="./images/email-lg.svg", width="243", height="163", alt="image description")
+								.card-content
+									h3 Last Minute Reservierungen
+									p Kurz vor dem Oktoberfest kommt es immer wieder zu Stornierungen von einzelnen Reservierungen. Im Rahmen der Oktoberfest-Booking Premium Mitgliedschaft informieren wir sie real-time über diese Kontingente und bieten Ihnen diese zur Reservierung an. Darüber hinaus gibt es in den Zelten sogenannte Kurzfrist-Reservierungen, die erst jeweils 24 Stunden vor dem Reservierungszeitraum vergeben werden dürfen. Auch über diese Kontingente informieren wir Sie rechtzeitig im Rahmen Ihrer Oktoberfest-Booking Premium-Mitgliedschaft.
+			include _layout/_section-acc
+		include _includes/_footer

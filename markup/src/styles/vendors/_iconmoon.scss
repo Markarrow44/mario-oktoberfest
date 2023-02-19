@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot') format('embedded-opentype'), url('../fonts/icomoon.ttf') format('truetype'), url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+	content: '\e91d';
+	color: #fff;
+}
+.icon-email:before {
+	content: '\e91e';
+	color: #fff;
+}
+.icon-password:before {
+	content: '\e91c';
+}
+.icon-chevrone-right:before {
+	content: '\e918';
+	color: #4090e7;
+}
+.icon-facebook-01:before {
+	content: '\e919';
+}
+.icon-linkedin:before {
+	content: '\e91a';
+}
+.icon-twitter:before {
+	content: '\e91b';
+}
+.icon-lock:before {
+	content: '\e917';
+}
+.icon-lang:before {
+	content: '\e916';
+	color: #4090e7;
+}
+.icon-card:before {
+	content: '\e915';
+}
+.icon-preload:before {
+	content: '\e914';
+	color: #fff;
+}
+.icon-edit:before {
+	content: '\e912';
+	color: #fff;
+}
+.icon-bin:before {
+	content: '\e913';
+	color: #fff;
+}
+.icon-cross:before {
+	content: '\e911';
+	color: #fff;
+}
+.icon-check:before {
+	content: '\e910';
+	color: #fff;
+	margin-left: 1px;
+}
+.icon-personen:before {
+	content: '\e90e';
+}
+.icon-service-1:before {
+	content: '\e90f';
+}
+.icon-menu:before {
+	content: '\e90d';
+}
+.icon-time:before {
+	content: '\e90b';
+}
+.icon-table:before {
+	content: '\e90c';
+}
+.icon-trank:before {
+	content: '\e907';
+	color: #9499a3;
+}
+.icon-music:before {
+	content: '\e908';
+	color: #9499a3;
+}
+.icon-image:before {
+	content: '\e909';
+	color: #9499a3;
+}
+.icon-location:before {
+	content: '\e90a';
+	color: #9499a3;
+}
+.icon-calendar-2:before {
+	content: '\e906';
+	color: #fff;
+}
+.icon-alarm:before {
+	content: '\e901';
+	color: #fff;
+}
+.icon-chevron-down-radius:before {
+	content: '\e904';
+}
+.icon-calendar:before {
+	content: '\e900';
+}
+.icon-chevrone-down:before {
+	content: '\e905';
+	color: #4090e7;
+}
+.icon-persone:before {
+	content: '\e902';
+}
+.icon-place:before {
+	content: '\e903';
+}
+
+.icon-subsc:before {
+	content: "\e91f";
+}

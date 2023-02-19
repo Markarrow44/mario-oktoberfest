@@ -1,0 +1,365 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include ./_layout/_nav
+		#js-header-fixed
+			header#header
+				.container
+					nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
+						.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
+						#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+							.login-holder
+								a(href="#" data-bs-toggle="modal" data-bs-target="#register").link Login
+								//- .is-logged
+								//- 	.avatar: img(src="./images/icon/avatar.svg", alt="user")
+								//- 	.user-name Dominik Pfeiffer
+							.dropdown
+								button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+									i.icon-lang
+									| Deutsch
+								ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+									li
+										.fake-radio
+											input#en(type="radio" , name="lang")
+											label(for="en").dropdown-item 
+												span
+												| ENGLISCH
+									li
+										.fake-radio
+											input#de(type="radio" , name="lang")
+											label(for="de").dropdown-item 
+												span
+												| Deutsch
+						.toggle-btn-holder.order-2.order-md-1
+							button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
+								span
+		main#main
+			section.section-hero
+				.container
+					.inner
+						.img
+							img(src="./images/hero-img-02.jpg"  alt="images description")
+						h1.hero-title Augustiner Festzelt
+						.js-btn-fixed
+							a(href="#reservation").btn.btn-primary
+								i.icon-calendar-2
+								span.text Reservieren
+			section.section-scrollspy.js-nav-fixed-container
+				.js-nav-fixed
+					.nav-pills.nav-links.js-anchor-nav
+						.container
+							ul.d-flex
+								li: a(href="#nav-link-01").nav-link
+									i.icon-place
+									| Das Festzelt
+								li: a(href="#nav-link-02").nav-link
+									i.icon-trank
+									| Speis & Trank
+								li: a(href="#nav-link-03").nav-link
+									i.icon-music
+									| Musik & Ambiente
+								li: a(href="#nav-link-04").nav-link
+									i.icon-image
+									| Bildergalerie
+								li: a(href="#nav-link-05").nav-link
+									i.icon-location
+									| Location
+				.container
+					.scrollspy-list#nav-link-01
+							.card-scrollspy
+								.row
+									.inner.d-flex.flex-wrap
+										.col-text
+											.card-text
+												h3 Das Festzelt
+												.js-read-more-holder(style="--lines-count: 7;")
+													.collapse-wrap.js-read-more-content
+														p 
+															| Bereits seit 1810 findet in München jährlich das weltweit größte Volksfest statt. Auf der Theresienweise, die liebevoll Wiesn genannt wird, bieten zahlreiche Brauereien ihre Biere und weitere Köstlichkeiten an. Viele brauen extra für das Oktoberfest spezielle Biere mit hoher Stammwürze und hohem Alkoholgehalt. Das Fest ist weltweit bekannt und einige Wiesnzelte sind inzwischen echte Institutionen. Dazu gehört auch die Augustiner Festhalle. Bereits seit 1903 ist sie ein fester Bestandteil des Volksfestes. Damit ist das Augustiner Festzelt eines der Ältesten. Kommst Du als Besucher in die Festhalle, darfst Du mit drei Dingen rechnen. Bereits seit 1810 findet in München jährlich das weltweit größte Volksfest statt. Auf der Theresienweise, die liebevoll Wiesn genannt wird, bieten zahlreiche Brauereien ihre Biere und weitere Köstlichkeiten an. Viele brauen extra für das Oktoberfest spezielle Biere mit hoher Stammwürze und hohem Alkoholgehalt. Das Fest ist weltweit bekannt und einige Wiesnzelte sind inzwischen echte Institutionen. Dazu gehört auch die Augustiner Festhalle. Bereits seit 1903 ist sie ein fester Bestandteil des Volksfestes. Damit ist das Augustiner Festzelt eines der Ältesten. Kommst Du als Besucher in die Festhalle, darfst Du mit drei Dingen rechnen
+													button.js-read-more-toggle(type="button")
+														i.icon-chevron-down-radius
+										.col-card.d-none.d-md-block
+											.card-list
+												h4.card-title Mehr Festzelte
+												ul.links
+													li: a(href="#")
+															i.icon-chevron-down-radius
+															| Fischer Vroni Festzelt
+													li: a(href="#")
+															i.icon-chevron-down-radius
+															| Marstall Festzelt
+													li: a(href="#")
+															i.icon-chevron-down-radius
+															| After Wiesn- Party
+													li: a(href="#")
+															i.icon-chevron-down-radius
+															| Fischer Vroni Festzelt
+												ul.links#collapseLinks.collapse
+													li: a(href="#")
+															i.icon-chevron-down-radius
+															| Fischer Vroni Festzelt
+													li: a(href="#")
+															i.icon-chevron-down-radius
+															| Marstall Festzelt
+													li: a(href="#")
+															i.icon-chevron-down-radius
+															| After Wiesn- Party
+													li: a(href="#")
+															i.icon-chevron-down-radius
+															| Fischer Vroni Festzelt
+												ul.links
+													li: a.collapsed(href="#collapseLinks" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseLinks").read-more
+															i.icon-chevron-down-radius
+															| alle anzeigen
+					.scrollspy-list#nav-link-02
+							.card-scrollspy
+								.row
+									.inner.d-flex.flex-wrap
+										.col-text
+											.card-text
+												h3 Speis & Trank
+												.mobile-img.d-md-none: img(src="./images/card-img-05.jpg", width="457" , height="341" , alt="image description")
+												.js-read-more-holder(style="--lines-count: 7;")
+													.collapse-wrap.js-read-more-content
+														p 
+															| Bereits seit 1810 findet in München jährlich das weltweit größte Volksfest statt. Auf der Theresienweise, die liebevoll Wiesn genannt wird, bieten zahlreiche Brauereien ihre Biere und weitere Köstlichkeiten an. Viele brauen extra für das Oktoberfest spezielle Biere mit hoher Stammwürze und hohem Alkoholgehalt. Das Fest ist weltweit bekannt und einige Wiesnzelte sind inzwischen echte Institutionen. Dazu gehört auch die Augustiner Festhalle.
+													button.js-read-more-toggle(type="button")
+														i.icon-chevron-down-radius
+										.col-card
+											.card-info-place
+												.card-image
+													img(src="./images/card-img-05.jpg", width="457" , height="341" , alt="image description")
+												.card-content
+													.collapse-item
+														a(href=""  role="button" aria-expanded="false")
+															i.icon-chevron-down-radius
+															| Augustiner Brauerei
+													.collapse-item
+														a(href="" role="button" aria-expanded="false")
+															i.icon-chevron-down-radius
+															| Menü
+					.scrollspy-list#nav-link-03
+							.card-scrollspy
+								.row
+									.inner.d-flex.flex-wrap
+										.col-text
+											.card-text
+												h3 Musik & Ambiente
+												.mobile-img.d-md-none: img(src="./images/card-img-06.jpg", width="457" , height="341" , alt="image description")
+												.js-read-more-holder(style="--lines-count: 7;")
+													.collapse-wrap.js-read-more-content
+														p 
+															| Bereits seit 1810 findet in München jährlich das weltweit größte Volksfest statt. Auf der Theresienweise, die liebevoll Wiesn genannt wird, bieten zahlreiche Brauereien ihre Biere und weitere Köstlichkeiten an. Viele brauen extra für das Oktoberfest spezielle Biere mit hoher Stammwürze und hohem Alkoholgehalt. Das Fest ist weltweit bekannt und einige Wiesnzelte sind inzwischen echte Institutionen. Dazu gehört auch die Augustiner Festhalle. Bereits seit 1903 ist sie ein fester Bestandteil des Volksfestes. Damit ist das Augustiner Festzelt eines der Ältesten. Kommst Du als Besucher in die Festhalle, darfst Du mit drei Dingen rechnen. Bereits seit 1810 findet in München jährlich das weltweit größte Volksfest statt. Auf der Theresienweise, die liebevoll Wiesn genannt wird, bieten zahlreiche Brauereien ihre Biere und weitere Köstlichkeiten an. Viele brauen extra für das Oktoberfest spezielle Biere mit hoher Stammwürze und hohem Alkoholgehalt. Das Fest ist weltweit bekannt und einige Wiesnzelte sind inzwischen echte Institutionen. Dazu gehört auch die Augustiner Festhalle. Bereits seit 1903 ist sie ein fester Bestandteil des Volksfestes. Damit ist das Augustiner Festzelt eines der Ältesten. Kommst Du als Besucher in die Festhalle, darfst Du mit drei Dingen rechnen
+													button.js-read-more-toggle(type="button")
+														i.icon-chevron-down-radius
+										.col-card
+											.card-info-place
+												.card-image
+													img(src="./images/card-img-06.jpg", width="457" , height="341" , alt="image description")
+												.card-content
+													.collapse-item
+														a(href="" role="button" aria-expanded="false")
+															i.icon-chevron-down-radius
+															| Link zur Bandwebseite
+													.collapse-item
+														a(href="" role="button" aria-expanded="false")
+															i.icon-chevron-down-radius
+															| Hörprobe
+					.scrollspy-list#nav-link-04
+						.card-scrollspy
+							.inner
+								h3 Bildergalerie
+								.js-swiper-image.swiper-image-holder
+									.swiper.swiper-image
+										.swiper-wrapper
+											.swiper-slide
+												.img: img(src="./images/hero-img-02.jpg", alt="image description")
+											.swiper-slide
+												.img: img(src="./images/card-img-05.jpg", alt="image description")
+											.swiper-slide
+												.img: img(src="./images/card-img-06.jpg", alt="image description")
+											.swiper-slide
+												.img: img(src="./images/card-img-06.jpg", alt="image description")
+									.swiper-button-next
+										i.icon-chevron-down-radius
+									.swiper-button-prev
+										i.icon-chevron-down-radius
+									.js-swiper-pagination.swiper-pagination.d-flex.justify-content-center
+					.scrollspy-list#nav-link-05
+						.card-scrollspy
+							.inner
+								h3 Lokation
+								.row
+									.col-text
+										img(src="./images/location.png", alt="image description")
+									.col-card
+										.card-info-place
+											.card-text-cont
+												h4.card-title Anfahrt
+												address
+													strong Öffis -
+													|  Bus 62, U3/U6, etc.
+												.item-text
+													strong parken  -
+													|  Autofahren und Parken
+												p Rund um die Theresienwiese ist das aussichtslos. Besucherinnen und Besucher sollten daher die Park & Ride-Parkplätze* an einem S- oder U-Bahnhof am Stadtrand nutzen. Im weiteren Umkreis um das Festgelände gibt es einen Sperrring, in den nur Anwohnende mit dem Auto einfahren können.
+											.card-content
+												.collapse-item
+													a(href="" role="button" aria-expanded="false")
+														i.icon-chevron-down-radius
+														| Park & Ride Parkplätze München
+												.collapse-item
+													a(href="" role="button" aria-expanded="false")
+														i.icon-chevron-down-radius
+														| Google Maps
+			section.section-reservation.js-cards-order#reservation
+				.container
+					.heading
+						h3 Reservation
+					article.card-order.d-lg-flex
+						.col-img
+							a(href="#")
+								.img(style="background-image: url('./images/card-img-03.jpg');")
+								.card-logo: img(src="./images/weiss-paulaner-festzelt-logo-p-500.svg", srcset="./images/weiss-paulaner-festzelt-logo-p-500.svg 137w,./images/weiss-paulaner-festzelt-logo-p-500.svg 205w" ,  sizes="(min-width: 768px) 205px, 137px" alt="weiss paulaner festzel")
+								span.castom-link 
+									| Infos zum Zelt 
+									i.icon-chevron-down-radius
+						.drop-holder
+							button.btn.btn-primary.d-md-none.btn-collapse.btn-order(type="button" data-bs-toggle="collapse" data-bs-target="#collapsecard-01" aria-expanded="false" aria-controls="collapsecard-01") Reservierungsanfrage absenden
+							.collapse.d-none.d-md-block(id="collapsecard-01")
+								.col-calendar
+									.calendar-header.d-md-flex
+										label(for="time-01")
+											input#time-01(type="checkbox", name="time")
+											div.fake-radio
+												span.icon
+												.checkbox-text
+													strong Mittag
+													span 12 - 15 Uhr
+										label(for="time-02")
+											input#time-02(type="checkbox", name="time")
+											div.fake-radio
+												span.icon
+												.checkbox-text
+													strong Nachmittag
+													span 15 - 18 Uhr
+										label(for="time-03")
+											input#time-03(type="checkbox", name="time")
+											div.fake-radio
+												span.icon
+												.checkbox-text
+													strong Abend
+													span 18 - 23 Uhr
+									ul.d-none.d-md-flex.days-list
+										li: span MO 
+										li: span DI 
+										li: span MI 
+										li: span DO 
+										li: span FR 
+										li: span SA 
+										li: span SO
+									ul.d-flex.date-list
+										li.d-none.d-md-block
+										li.d-none.d-md-block
+										li.d-none.d-md-block
+										li.d-none.d-md-block
+										li.d-none.d-md-block
+										li.disable: label(for="day-01")
+												input#day-01(type="radio", name="day" )
+												span.fake-radio
+													span.mob-day.d-md-none SA -
+													| 16.09
+										li: label(for="day-02")
+												input#day-02(type="radio", name="day" )
+												span.fake-radio
+													span.mob-day.d-md-none SO -
+													| 17.09.
+										li.disable: label(for="day-03")
+												input#day-03(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none MO -
+													| 18.09
+										li: label(for="day-04")
+												input#day-04(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none DI -
+													| 19.09.
+										li: label(for="day-05")
+												input#day-05(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none MI -
+													| 20.09.
+										li: label(for="day-06")
+												input#day-06(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none DO -
+													| 21.09.
+										li: label(for="day-07")
+												input#day-07(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none DO -
+													| 22.09.
+										li: label(for="day-08")
+												input#day-08(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none SA -
+													| 23.09.
+										li: label(for="day-09")
+												input#day-09(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none SO -
+													| 24.09.
+										li.disable: label(for="day-10")
+												input#day-10(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none MO -
+													| 25.09
+										li: label(for="day-11")
+												input#day-11(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none MO -
+													| 25.09
+										li: label(for="day-12")
+												input#day-12(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none DI -
+													| 26.09.
+										li: label(for="day-13")
+												input#day-13(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none MI -
+													| 27.09.
+										li: label(for="day-14")
+												input#day-14(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none DO -
+													| 28.09.
+										li: label(for="day-15")
+												input#day-15(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none FR -
+													| 29.09.
+										li: label(for="day-16")
+												input#day-16(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none SA -
+													| 30.09.
+										li: label(for="day-17")
+											input#day-17(type="radio", name="day")
+											span.fake-radio
+												span.mob-day.d-md-none SO -
+												| 01.10.
+										li: label(for="day-18")
+												input#day-18(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none MO -
+													| 02.10.
+										li: label(for="day-19")
+												input#day-19(type="radio", name="day")
+												span.fake-radio
+													span.mob-day.d-md-none DI -
+													| 03.10.
+								.col-btn
+									button.btn.btn-primary 
+										span Tisch reservieren
+		include _includes/_footer

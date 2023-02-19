@@ -1,0 +1,44 @@
+.modal.fade#login(tabindex="-1" aria-hidden="true" aria-modal="true" )
+	.modal-dialog
+		.block-modal-register
+			.heading
+				a(href="#") Oktoberfest Booking
+				h2 Log In
+			form(action="#").was-validated
+				.form-inner
+					.row
+						.col-12.form-check
+							label(for="email") Email Adresse
+							input#email.form-check-input(type="email"  placeholder="Email Adresse" required)
+							<div class="invalid-feedback">Please enter a valid E-Mail Adress</div> 
+						.col-12
+							label(for="passwort") Passwort 
+							input#passwort(type="text" placeholder="Passwort" required)
+				.block-remb.d-flex
+					.fake-checkbox
+						input#remeber(type="checkbox")
+						label(for="remeber")
+							span
+							| Remember Me
+
+					a(href="#") Forgot Password?
+				.divider.mb-1: span oder
+				.btn-group-login
+					.row
+						.col-4
+							a(href="#").btn.btn-primary.facebook
+								img(src="./images/icon/facebook.svg", width="25" , height="25" , alt="Facebook")
+								span Facebook
+						.col-4
+							a(href="#").btn.btn-light.google
+								img(src="./images/icon/google-white.svg", width="23" , height="23" , alt="Facebook")
+								span Google
+						.col-4
+							a(href="#").btn.btn-light.twitter
+								img(src="./images/icon/twitter-white.svg", width="22" , height="16" , alt="Facebook")
+								span Twitter
+				.text.text-center
+					p 
+						| Don’t  have an account? 
+						a(href="#") Sign up for free
+				button.btn.btn-primary Log In

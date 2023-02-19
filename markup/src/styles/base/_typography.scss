@@ -1,0 +1,144 @@
+
+// -----------------------------------------------------------------------------
+// This file contains typography styles.
+// -----------------------------------------------------------------------------
+
+///*
+//  Set up a decent box model on the root element
+//*/
+
+// set html { font-size: 62.5%; } if you want to make 1rem equal to 10px. dot not use it with css frameworks like bootstrap. tailwind etc.
+
+/*
+  Basic typography style for copy text
+*/
+body {
+  color: $body-color;
+  font-family: $font-family-base;
+  font-size: 16px;
+  line-height: $line-height-base;
+  font-weight: $font-weight-normal;
+}
+
+/*
+  Basic styles for links
+*/
+a {
+  @include transition(color);
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+ul,
+ol,
+dl,
+p {
+  margin: 0 0 $paragraph-margin-bottom;
+}
+
+.hero-title {
+	font-weight: 500;
+	font-size: 46px;
+	line-height: 1;
+	font-family: templegarten;
+	margin-bottom: 0;
+
+	@include media-breakpoint-up(md) {
+		font-size: 80px;
+	}
+
+	&.sm {
+		font-size: 33px;
+		line-height: calc(40 / 33);
+		margin-bottom: 33px;
+
+		@include media-breakpoint-up(md) {
+			font-size: 40px;
+			line-height: calc(64 / 40);
+			margin-bottom: 7px;
+		}
+	}
+	
+	&.lg {
+		font-size: 33px;
+		line-height: 1;
+		margin-bottom: 0;
+
+		@include media-breakpoint-up(md) {
+			font-size: 70px;
+			line-height: calc(94 / 70);
+		}
+	}
+}
+
+
+h1,
+.h1 {
+	font-size: 26px;
+	line-height: 1;
+	font-weight: 600;
+
+	@include media-breakpoint-up(md) {
+		font-size: 36px;
+		line-height: calc(40 / 36);
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: 36px;
+		line-height: calc(40 / 36);
+	}
+}
+
+h2,
+.h2 {
+	font-size: 26px;
+	line-height: 1;
+	font-weight: 600;
+
+	@include media-breakpoint-up(xl) {
+		font-size: 30px;
+		line-height: calc(32 / 30);
+	}
+} 
+
+h3,
+.h3 {
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 600;
+	line-height: calc(24 / 20);
+
+	@include media-breakpoint-up(xl) {
+		font-size: 23px;
+		line-height: calc(24 / 23);
+	}
+} 
+
+h4,
+.h4 {
+	font-size: 20px;
+	line-height: calc(24 / 20);
+	font-weight: 600;
+
+	@include media-breakpoint-up(xl) {
+		font-size: 20px;
+		line-height: calc(28 / 20);
+	}
+} 
+
+h6,
+.h6 {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: calc(28 / 16);
+
+	@include media-breakpoint-up(xl) {
+		font-size: 16px;
+		line-height: calc(28 / 16);
+	}
+}

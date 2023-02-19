@@ -1,0 +1,107 @@
+section.section-filters.js-cards-order
+	.container
+		.filter-nav-opener(data-bs-toggle="modal", data-bs-target="#filterModal").d-flex.justify-content-between.align-items-center.d-mdl-none
+			i.icon-calendar
+			.text
+				strong Wählen sie ein Zelt
+				p Im welches Zelt wollen Sie Oktoberfest feiern?
+			i.icon-chevron-down-radius
+		.js-filter-panel.filter-panel
+			#filterModal.modal(aria-labelledby="filterModal")
+				.modal-dialog
+					.modal-content.d-mdl-flex#accordionFilters
+						.item
+							.collapse-holder.js-custom-choice.js-static-calendar-holder
+								button#date.btn.btn-secondary.dropdown-toggle.collapsed(type='button' data-bs-toggle="collapse" data-bs-target="#date-table" aria-expanded="false" aria-controls="date-table")
+									i.icon-calendar
+									span.dropdown-text(data-default-text="Datum") Datum
+								.pagin-arrow
+									button(type="button").js-prev-date.prev-date
+										i.icon-chevron-down-radius
+									button(type="button").js-next-date.next-date 
+										i.icon-chevron-down-radius
+								#date-table.collapse(data-bs-parent="#accordionFilters")
+									.collapse-table
+										.month-block
+											span Sep/Okt
+										table.js-static-calendar(data-lang="de" data-input-name='day' data-iso-date-from='2023-09-16' data-iso-date-to='2023-10-03')
+											thead
+												tr
+													td MO
+													td DI
+													td MI
+													td MO
+													td FR
+													td SA
+													td SO
+											tbody
+												//- dates placeholder
+										a(href="#").clear-btn Löschen 
+						.item
+							.collapse-holder.js-custom-choice.custom-choice(data-type="single")
+								button#persons.btn.btn-secondary.dropdown-toggle.collapsed(type='button' data-bs-toggle="collapse" data-bs-target="#personen" aria-expanded="false" aria-controls="personen")
+									i.icon-persone
+									span.dropdown-text(data-default-text="Personen") Personen
+								#personen.collapse(data-bs-parent="#accordionFilters")
+									ul.collapse-list
+										li
+											label(for="personen-2")
+												input#personen-2(type="radio", name="personen", data-label="2 personen")
+												span
+													span.fake-radio
+													| 2 Personen
+										li
+											label(for="personen-10")
+												input#personen-10(type="radio", name="personen", data-label="10 personen")
+												span
+													span.fake-radio
+													| 10 Personen
+										li
+											label(for="personen-20")
+												input#personen-20(type="radio", name="personen", data-label="20 personen")
+												span
+													span.fake-radio
+													| 20 Personen
+										li
+											a(href="#").clear-btn Löschen 
+						.item
+							.collapse-holder.js-custom-choice.custom-choice(data-type="multiple")
+								button#zelt.btn.btn-secondary.dropdown-toggle.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#zelt-list" aria-expanded="false" aria-controls="zelt-list")
+									i.icon-place
+									span.dropdown-text(data-default-text="Zelt" data-selected-text="Zelte ausgewahlt") Zelt
+								.collapse#zelt-list(data-bs-parent="#accordionFilters")
+									ul.collapse-list
+										li
+											label(for="zelt-item-01")
+												input#zelt-item-01(type="checkbox", name="zelt item", data-label="Paulaner Festzelt")
+												span Paulaner Festzelt
+										li
+											label(for="zelt-item-02")
+												input#zelt-item-02(type="checkbox", name="zelt item", data-label="Schottenhamel Festzelt")
+												span Schottenhamel Festzelt
+										li
+											label(for="zelt-item-03")
+												input#zelt-item-03(type="checkbox", name="zelt item", data-label="Marstall Festzelt")
+												span Marstall Festzelt
+										li
+											label(for="zelt-item-04")
+												input#zelt-item-04(type="checkbox", name="zelt item", data-label="Richart Festzelt")
+												span Richart Festzelt
+										li
+											label(for="zelt-item-05")
+												input#zelt-item-05(type="checkbox", name="zelt item", data-label="Schützen Festzelt")
+												span Schützen Festzelt
+										li
+											label(for="zelt-item-06")
+												input#zelt-item-06(type="checkbox", name="zelt item", data-label="Fischer-Vroni Festzelt")
+												span Fischer-Vroni Festzelt
+										li
+											label(for="zelt-item-07")
+												input#zelt-item-07(type="checkbox", name="zelt item", data-label="Augustiner Festzelt")
+												span Augustiner Festzelt
+										li 
+											span.clear-btn Löschen
+						.item
+							a(href="#" data-bs-dismiss="modal").clear-all-btn.d-mdl-none Löschen 
+							a(href="#" data-bs-dismiss="modal").btn.btn-primary.btn-send Suche
+		include _order-cards

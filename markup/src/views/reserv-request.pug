@@ -1,0 +1,47 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include _includes/_header
+		main#main
+			section.section-hero.section-hero-sm
+				.container
+					.inner
+						.img
+							img(src="./images/hero-img-04.jpg"  alt="images description")
+						h1.hero-title.lg Paulaner Festzelt
+			section.section-reg-req
+				.container
+					.inner
+						.inner-mobile
+							.heading.text-center
+								.img: img(src="./images/img-icon-01.svg", width="107" , height="137" , alt="image decription")
+								h2 Automatische Reservierungsanfrage erstellt
+							.card-res
+								.col-img
+									.img: img(src="./images/acc-img.jpg", alt="image decription")
+									.card-content
+										h4 Schützenfestzelt
+										p ... Warten auf Öffnung des Reservierunsgportals
+								.col-list
+									ul.check-list
+										li.active
+											i.icon-check
+											span Dominik Pfeiffer
+										li.active
+											i.icon-check
+											span 20 Personen
+										li.active
+											i.icon-check
+											span 18.09.2023
+										li.active
+											i.icon-check
+											span Mittagsschicht , 12-15 Uhr
+										li.active
+											i.icon-check
+											span Hausbox
+								.col-edit
+									ul
+										li: button.active.btn.btn-primary: i.icon-edit
+										li: button.active.btn.btn-primary: i.icon-bin
+						a(href="#").btn.btn-primary Zu deiner Übersicht
+		include _includes/_footer

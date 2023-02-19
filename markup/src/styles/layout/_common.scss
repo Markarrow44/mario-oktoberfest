@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the common layout of the site
+// -----------------------------------------------------------------------------
+:root {
+	scroll-behavior: auto !important;
+}
+
+body {
+	background-color: #fbfcfd;
+	font-size: 14px;
+}
+
+.wrapper {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+// skip links
+.accessibility {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+
+	&:focus {
+		position: static;
+		width: auto;
+		height: auto;
+	}
+}
+
+.container {
+	width: 100%;
+	min-width: 375px;
+
+	@include media-breakpoint-down(md) {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+
+.inner-wrapper-sticky {
+	width: 100%;
+	background-color: $white;
+}
+
+.link-decor {
+	text-decoration: underline !important;
+	font-weight: 600;
+}
+
+.modal-dialog {
+	pointer-events: all;
+}
+
+#pages-list {
+	margin: 0 auto;
+	list-style: none;
+	padding: 40px 0;
+	max-width: 600px;
+	li:nth-child(odd) {
+		background: #fff;
+		border-radius: 5px;
+	}
+	a {
+		transition: color 0.3s;
+		color: #4a4a4a;
+		display: block;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #88aaaa;
+	}
+	a:before {
+		content: '';
+		width: 20px;
+		height: 20px;
+		background-size: contain;
+		margin-right: 10px;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' version='1.1'%3E %3Cg id='surface1'%3E %3Cpath d='M41 5H7l3 34 14 4 14-4z' fill='%23E65100' /%3E %3Cpath d='M24 8v31.898L35.2 36.7 37.7 8z' fill='%23FF6D00' /%3E %3Cpath d='M24 25v-4h8.602l-.704 11.5L24 35.102v-4.204l4.102-1.398.296-4.5zm8.898-8l.301-4H24v4z' fill='%23FFF' /%3E %3Cpath d='M24 30.898v4.204L16.102 32.5l-.403-5.5h4l.2 2.5zM19.102 17H24v-4h-9.102l.704 12H24v-4h-4.602z' fill='%23EEE' /%3E %3C/g%3E %3C/svg%3E ");
+	}
+}

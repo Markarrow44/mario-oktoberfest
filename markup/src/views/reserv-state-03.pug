@@ -1,0 +1,485 @@
+include _includes/_head
+	block content
+		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
+		include _includes/_header
+		main#main
+			section.section-order
+				.container
+					h1.hero-title.sm.text-center.text-md-start Automatische Reservierungsanfrage
+					.row
+						.col-acc
+							#js-nav-checkout
+								.nav-checkout.d-lg-none
+									ul.d-flex
+										li.selected: i.icon-place
+										li.selected: i.icon-calendar
+										li.selected: i.icon-time
+										li.selected: i.icon-personen
+										li.selected: i.icon-table
+										li.selected: i.icon-menu
+										li.selected: i.icon-persone
+										li: i.icon-service-1
+							#acc.acc
+								.acc-item
+									.img.d-none.d-lg-block: img(src="./images/acc-img.jpg", widht="840" , height="244" , alt="image decription")
+									.acc-nav.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-02' aria-expanded='false' aria-controls='ollapse-02')
+										.d-flex.align-items-center.justify-content-between
+											.acc-nav-text.d-flex.align-items-center
+												i.icon-place
+												span
+													span.d-none.d-md-inline Augustiner 
+													| Zelt
+											i.icon-chevron-down-radius
+									#collapse-02.collapse.accordion-collapse(data-bs-parent="#acc")
+										.inner
+											.row
+												.col-md-6
+													label(for="plcace-01") 
+														input#plcace-01(type="radio", name="plcace")
+														p Paulaner Festzelt
+												.col-md-6
+													label(for="plcace-02") 
+														input#plcace-02(type="radio", name="plcace")
+														p Schottenhammel Festzelt
+												.col-md-6
+													label(for="plcace-03") 
+														input#plcace-03(type="radio", name="plcace")
+														p Rischart Festzelt
+												.col-md-6
+													label(for="plcace-04") 
+														input#plcace-04(type="radio", name="plcace")
+														p Marstall Festzelt
+												.col-md-6
+													label(for="plcace-05") 
+														input#plcace-05(type="radio", name="plcace")
+														p Marstall Festzelt
+												.col-md-6
+													label(for="plcace-06") 
+														input#plcace-06(type="radio", name="plcace")
+														p Schützenfestzelt
+												.col-md-6
+													label(for="plcace-07") 
+														input#plcace-07(type="radio", name="plcace")
+														p Fischer Vroni Festzelt
+								.acc-item
+									.acc-nav.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-03' aria-expanded='false' aria-controls='ollapse-03')
+										.d-flex.align-items-center.justify-content-between
+											.acc-nav-text.d-flex.align-items-center
+												i.icon-calendar
+												span Datum
+											i.icon-chevron-down-radius
+									#collapse-03.collapse.accordion-collapse(data-bs-parent="#acc")
+										.inner
+											.col-calendar
+												ul.d-none.d-md-flex.days-list
+													li: span MO 
+													li: span DI 
+													li: span MI 
+													li: span DO 
+													li: span FR 
+													li: span SA 
+													li: span SO
+												ul.d-flex.date-list
+													li.d-none.d-md-block
+													li.d-none.d-md-block
+													li.d-none.d-md-block
+													li.d-none.d-md-block
+													li.d-none.d-md-block
+													li.disable: label(for="day-021")
+															input#day-021(type="radio", name="day2" )
+															span.fake-radio
+																span.mob-day.d-md-none SA -
+																| 16.09
+													li: label(for="day-022")
+															input#day-022(type="radio", name="day2" )
+															span.fake-radio
+																span.mob-day.d-md-none SO -
+																| 17.09.
+													li: label(for="day-023")
+															input#day-023(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none MO -
+																| 18.09
+													li: label(for="day-024")
+															input#day-024(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none DI -
+																| 19.09.
+													li: label(for="day-025")
+															input#day-025(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none MI -
+																| 20.09.
+													li: label(for="day-026")
+															input#day-026(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none DO -
+																| 21.09.
+													li: label(for="day-027")
+															input#day-027(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none DO -
+																| 22.09.
+													li: label(for="day-028")
+															input#day-028(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none SA -
+																| 23.09.
+													li: label(for="day-029")
+															input#day-029(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none SO -
+																| 24.09.
+													li: label(for="day-120")
+															input#day-120(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none MO -
+																| 25.09
+													li: label(for="day-121")
+															input#day-121(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none MO -
+																| 25.09
+													li: label(for="day-122")
+															input#day-122(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none DI -
+																| 26.09.
+													li: label(for="day-123")
+															input#day-123(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none MI -
+																| 27.09.
+													li: label(for="day-124")
+															input#day-124(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none DO -
+																| 28.09.
+													li: label(for="day-125")
+															input#day-125(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none FR -
+																| 29.09.
+													li: label(for="day-126")
+															input#day-126(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none SA -
+																| 30.09.
+													li: label(for="day-127")
+														input#day-127(type="radio", name="day2")
+														span.fake-radio
+															span.mob-day.d-md-none SO -
+															| 01.10.
+													li: label(for="day-128")
+															input#day-128(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none MO -
+																| 02.10.
+													li: label(for="day-129")
+															input#day-129(type="radio", name="day2")
+															span.fake-radio
+																span.mob-day.d-md-none DI -
+																| 03.10.
+								.acc-item
+									.acc-nav.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-04' aria-expanded='false' aria-controls='ollapse-04')
+										.d-flex.align-items-center.justify-content-between
+											.acc-nav-text.d-flex.align-items-center
+												i.icon-time
+												span Uhrzeit/Schicht
+											i.icon-chevron-down-radius
+									#collapse-04.collapse.accordion-collapse(data-bs-parent="#acc")
+										.inner.time-radios
+											.row
+												.col-md-4
+													label(for="time-01").time-label
+														input#time-01(type="radio" name="time1")
+														div.time-fake-radio
+															span Mittags
+															p 12-15 Uhr
+												.col-md-4
+													label(for="time-02").time-label
+														input#time-02(type="radio" name="time1")
+														div.time-fake-radio
+															span Nachmitags
+															p 15-18 Uhr
+												.col-md-4
+													label(for="time-03").time-label
+														input#time-03(type="radio" name="time1")
+														div.time-fake-radio
+															span Abends
+															p 18-23 Uhr
+								.acc-item
+									.acc-nav.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-05' aria-expanded='false' aria-controls='ollapse-05')
+										.d-flex.align-items-center.justify-content-between
+											.acc-nav-text.d-flex.align-items-center
+												i.icon-personen
+												span Anzahl Personen
+											i.icon-chevron-down-radius
+									#collapse-05.collapse.accordion-collapse(data-bs-parent="#acc")
+										.inner
+											.row
+												.col-md-3
+													label(for="persone-01") 
+														input#persone-01(type="radio", name="persone")
+														p 8 Personen
+												.col-md-3
+													label(for="persone-02") 
+														input#persone-02(type="radio", name="persone")
+														p 10 Personen
+												.col-md-3
+													label(for="persone-03") 
+														input#persone-03(type="radio", name="persone")
+														p 20 Personen
+												.col-md-3
+													label(for="persone-04") 
+														input#persone-04(type="radio", name="persone")
+														p Anzahl
+								.acc-item.table-order
+									.acc-nav.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-06' aria-expanded='false' aria-controls='ollapse-06')
+										.d-flex.align-items-center.justify-content-between
+											.acc-nav-text.d-flex.align-items-center
+												i.icon-table
+												span Tisch im Bereich
+											i.icon-chevron-down-radius
+									#collapse-06.collapse.accordion-collapse(data-bs-parent="#acc")
+										.img-table-holder
+											img(src="./images/place.png", width="667" , height="426" , alt="image decription")
+										.inner
+											.row
+												.col-md-3
+													label(for="table-01") 
+														input#table-01(type="radio", name="table")
+														p Reihe 1-4
+												.col-md-3
+													label(for="table-02") 
+														input#table-02(type="radio", name="table")
+														p Reihe 5-8
+												.col-md-3
+													label(for="table-03") 
+														input#table-03(type="radio", name="table")
+														p Reihe 9-14
+												.col-md-3
+													label(for="table-04") 
+														input#table-04(type="radio", name="table")
+														p Reihe 15-18
+												.col-md-3
+													label(for="table-05") 
+														input#table-05(type="radio", name="table")
+														p Box 6-8
+												.col-md-3
+													label(for="table-06") 
+														input#table-06(type="radio", name="table")
+														p Box 9-10
+												.col-md-3
+													label(for="table-07") 
+														input#table-07(type="radio", name="table")
+														p Box 11-12
+												.col-md-3
+													label(for="table-08") 
+														input#table-08(type="radio", name="table")
+														p Box 13-14
+								.acc-item
+									.acc-nav.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-07' aria-expanded='false' aria-controls='ollapse-07')
+										.d-flex.align-items-center.justify-content-between
+											.acc-nav-text.d-flex.align-items-center
+												i.icon-menu
+												span Menüauswahl
+											i.icon-chevron-down-radius
+									#collapse-07.collapse.accordion-collapse(data-bs-parent="#acc")
+										.inner.time-radios.time-radio
+											.row.flex-md-column
+												.col-12
+													label(for="time-04").time-label
+														input#time-04(type="radio" name="time11")
+														div.time-fake-radio.d-md-flex
+															span Mindestabnahme
+															p 2 Bier und  ein Hendl pro Person
+															strong.price € 36,99
+												.col-12
+													label(for="time-05").time-label
+														input#time-05(type="radio" name="time11")
+														div.time-fake-radio.d-md-flex
+															span Mittleres Menü
+															p 3 Bier und  ein Hendl pro Person
+															strong.price € 48,99
+												.col-12
+													label(for="time-06").time-label
+														input#time-06(type="radio" name="time11")
+														div.time-fake-radio.d-md-flex
+															span Maximales Menü
+															p 4 Bier und  ein Hendl pro Person
+															strong.price € 60,99
+								.acc-item
+									.acc-nav.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-08' aria-expanded='false' aria-controls='ollapse-08')
+										.d-flex.align-items-center.justify-content-between
+											.acc-nav-text.d-flex.align-items-center
+												i.icon-persone
+												span Nutzerkonto
+											i.icon-chevron-down-radius
+									#collapse-08.collapse.accordion-collapse(data-bs-parent="#acc")
+										.inner
+											form#form-order(action="#")
+												.row
+													.col-md-6
+														label Geschlecht
+														select.form-select#weiblich(name="weiblich")
+															option(selected) Mannlich
+															option Weiblich
+															option Mr
+															option Mrs
+															option Miss
+															option Ms
+															option Dr
+													.col-md-6
+														label Titel
+														select.form-select#titel(name="weiblich")
+															option(selected) Titel
+															option Titel
+															option Titel
+															option Titel
+															option Titel
+															option Titel
+															option Titel
+													.col-md-6
+														label Vorname
+														input.form-control(type="text" placeholder="Vorname")
+													.col-md-6
+														label Nachname
+														input.form-control(type="text" placeholder="Nachname")
+													.col-md-6
+														label Straße, Hausnummer
+														input.form-control(type="text" placeholder="Straße, Hausnummer")
+													.col-md-6
+														label PLZ
+														input.form-control(type="text" placeholder="PLZ")
+													.col-md-6
+														label Stadt
+														input.form-control(type="text" placeholder="Stadt")
+													.col-md-6
+														label Region
+														input.form-control(type="text" placeholder="Region")
+													.col-md-6
+														label E-Mail
+														input.form-control(type="email" placeholder="E-Mail")
+													.col-md-6
+														label Telefon
+														input.form-control(type="email" placeholder="Telefon")
+													.col-md-6
+														label Firma
+														input.form-control(type="text" placeholder="Firma")
+													.col-md-6
+														label Abteilung
+														input.form-control(type="text" placeholder="Abteilung")
+								.acc-item
+									.acc-nav.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapse-09' aria-expanded='false' aria-controls='ollapse-09')
+										.d-flex.align-items-center.justify-content-between
+											.acc-nav-text.d-flex.align-items-center
+												i.icon-service-1
+												span Service-Auswahl
+											i.icon-chevron-down-radius
+									#collapse-09.collapse.collapse-card.accordion-collapse(data-bs-parent="#acc")
+										.inner
+											.row
+												.col-xl-6.d-flex
+													.card-service.primary
+														.inner.d-flex
+															.card-img
+																img(src="./images/img-icon-01.svg", width="107" , height="137" , alt="image description")
+															.card-text
+																h4 Wiesn-Basic <sup>+</sup>
+																p Automatische Reservierungsanfrage 
+																.price-holder.d-flex
+																	span.price € 9,90
+																	span.text Einmallige Zahlung
+															ul.checkbox-list
+																li: label(for="terms")
+																	input#terms(type="checkbox", name="terms")
+																	span I accept the <a href="#">Terms and Conditions</a>
+																li: label(for="privacy")
+																	input#privacy(type="checkbox", name="privacy")
+																	span I accept the <a href="#">Privacy Policy</a>
+																li: label(for="up")
+																	input#up(type="checkbox", name="up")
+																	span I want to be updated regarding OB
+												.col-xl-6.d-flex
+													.card-service.warning
+														.inner.d-flex
+															.card-img
+																img(src="./images/img-icon-02.svg", width="107" , height="137" , alt="image description")
+															.card-text
+																h4 
+																	| Wiesn 
+																	mark VIP
+																p Exclusive Erstinformationen Last Minute Buchungen, uvm.
+																.price-holder.d-flex
+																	span.price € 49,90
+																	span.text pro Jahr <br/> inkl. 19% MwSt.
+															ul.checkbox-list
+																li: label(for="terms3")
+																	input#terms3(type="checkbox", name="terms")
+																	span I accept the <a href="#">Terms and Conditions</a>
+																li: label(for="privacy3")
+																	input#privacy3(type="checkbox", name="privacy")
+																	span I accept the <a href="#">Privacy Policy</a>
+																li: label(for="up3")
+																	input#up3(type="checkbox", name="up")
+																	span I want to be updated regarding OB
+							.js-btn-fixed-bottom.d-lg-none
+								.js-btn-fixed-block
+									a(href="#").btn.btn-primary.btn-order Reservierungsanfrage absenden 
+						.col-sidebar.d-none.d-lg-block
+							#js-sidebar-fixed
+								aside.sidebar
+									.card-user
+											.card-header
+												.d-flex.align-items-center
+													.col-logo
+														.user-logo: img(src="./images/user-logo.png", width="63" , height="63" ,alt="user logo")
+													.col-info
+														strong.user-name Dominik Pfeiffer
+														.user-email d.pfeiffer@linksderisar.com
+											.order-info
+												ul.check-list
+													li.selected 
+														i.icon-check
+														span Augustiner Festzelt
+													li.selected 
+														i.icon-check
+														span Sa - 16.09. 2022
+													li.selected 
+														i.icon-check
+														span Mittag 13-15
+													li.selected 
+														i.icon-check
+														span Anzahl Personen
+													li.selected 
+														i.icon-check
+														span Bereich 11-12
+													li.selected 
+														i.icon-check
+														span 4 Bier und  ein Hendl pro Person
+													li.selected 
+														i.icon-check
+														span Dominik Dr Pfeiffer
+											.card-footer
+												ul.check-list
+													li.selected
+														i.icon-check
+														span Wiesn-Basic+
+												.coupon-code
+													label Gutschein
+													.d-flex
+														input.form-control(type="text" placeholder="Gutscheincode")
+														button.btn.btn-primary Einlösen
+												table.tabel-price.active
+													tr
+														td: i Summe ohne MwSt.
+														td: strong € 9,90
+													tr
+														td: i zzgl. 19% MwSt.
+														td: strong € 00,00
+													tr
+														td  Gesamtsumme
+														td: span € 9,90
+											button.btn.btn-primary Reservierungsanfrage absenden
+		include _includes/_footer

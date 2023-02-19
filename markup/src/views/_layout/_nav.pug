@@ -1,0 +1,92 @@
+nav.main-navigation.offcanvas.offcanvas-end(tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel")
+	.close-btn-holder
+		a(href="#").sub-cards-close: i.icon-chevrone-right
+		button(data-bs-dismiss="offcanvas" aria-label="Close").btn-close
+	.offcanvas-body
+		.inner
+			.user-infor
+				.row
+					.col-info
+						.avatar: img(src="./images/user-img-04.png", width="48", height="48" , alt="image decription")
+						.user-infor-text
+							strong Dominik Pfeiffer
+							span Servus Dominik!
+					.col-btn
+						a(href="#").btn.btn-outline-primary Logout
+			.card-holder
+				.card-nav.dropdown-toggle(data-bs-toggle="dropdown" aria-expanded="false")
+					.text
+						h6 Paulaner Festzelt
+						p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					.img: img(src="./images/icon/nav-img.svg", width="102" , height="99" , alt="image decription")
+				.sub-cards.dropdown-menu
+					.custom-scroll
+						.sub-card
+							.text
+								h6 Augustiner Festzelt
+							.img: img(src="./images/img-01.png", width="69" , height="69" , alt="image decription")
+						.sub-card
+							.text
+								h6 Schottenhamel Festzelt
+							.img: img(src="./images/img-02.png", width="49" , height="73" , alt="image decription")
+						.sub-card
+							.text
+								h6 Paulaner Festzelt
+							.img: img(src="./images/img-03.png", width="49" , height="73" , alt="image decription")
+						.sub-card
+							.text
+								h6 Paulaner Festzelt
+							.img: img(src="./images/img-03.png", width="49" , height="73" , alt="image decription")
+						.sub-card
+							.text
+								h6 Paulaner Festzelt
+							.img: img(src="./images/img-02.png", width="49" , height="73" , alt="image decription")
+				ul.link-list
+					li: a(href="#").link-button
+						span After Wiesn Locations
+					li: a(href="#").link-button
+						span Hotels
+					li: a(href="#").link-button
+						span Meine Reservierungen
+					li: a(href="#").link-button
+						span Über Uns
+					li: a(href="#").link-button
+						span Kontakt
+			.card-nav.warning
+				.text
+					h6 Werden Sie zum Wiesn-<mark>VIP</mark>
+					p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					a(href="#")
+						span Entdecken
+						i.icon-chevrone-right
+				.img: img(src="./images/img-icon-02.svg", width="89" , height="95" , alt="image decription")
+			.btn-holder
+				.row
+					.col-6
+						a(href="#").btn.btn-outline-primary Registrieren
+					.col-6
+						a(href="#").btn.btn-primary Jetzt Reservieren 
+		.d-flex.align-items-end.justify-content-between
+			.soc-netw
+				strong follow us on
+				ul
+					li: a(href="#"): i.icon-facebook-01
+					li: a(href="#"): i.icon-twitter
+					li: a(href="#"): i.icon-linkedin
+			.dropdown.dropdown-lang
+				button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+					i.icon-lang
+					| Deutsch
+				ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
+					li
+						.fake-radio
+							input#en(type="radio" , name="lang")
+							label(for="en").dropdown-item 
+								span
+								| ENGLISCH
+					li
+						.fake-radio
+							input#de(type="radio" , name="lang")
+							label(for="de").dropdown-item 
+								span
+								| Deutsch

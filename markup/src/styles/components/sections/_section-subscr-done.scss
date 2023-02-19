@@ -1,0 +1,139 @@
+.section-subscr-done {
+	padding-bottom: 32px;
+	padding-top: 32px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 0;
+		padding-bottom: 64px;
+	}
+
+	.inner {
+		padding: 24px 15px 42px;
+		border: 1px solid #ECECEE;
+		border-radius: 8px;
+		background-color: $white;
+
+		@include media-breakpoint-up(md) {
+			padding: 48px 0;
+		}
+
+		&.no-style {
+			@include media-breakpoint-down(md) {
+				background: transparent;
+				border: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+			}
+		}
+	}
+
+	.heading {
+		margin-bottom: 32px;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 25px;
+		}
+
+		.img-holder {
+			margin-bottom: 24px;
+		}
+
+		span {
+			display: block;
+			color: #9499A3;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: calc(28 / 18);
+			margin-bottom: 8px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 22px;
+				line-height: calc(28 / 22);
+			}
+		}
+
+		h2 {
+			font-weight: 600;
+			font-size: 26px;
+			line-height: 1;
+			margin-bottom: 0;
+
+			@include media-breakpoint-up(md) {
+				font-size: 40px;
+			}
+		}
+
+		&.heading-mobile {
+			@include media-breakpoint-down(md) {
+				border: 1px solid #ECECEE;
+				border-radius: 8px;
+				padding-top: 32px;
+			}
+
+			h2 {
+				@include media-breakpoint-down(md) {
+					margin-bottom: 40px;
+					padding: 0 10px;
+				}
+			}
+
+			.btn {
+				width: 100%;
+				border-radius: 0 0 4px 4px;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 45px;
+			}
+		}
+	}
+
+	.email-logo {
+		display: inline-block;
+		position: relative;
+		margin-bottom: 22px;
+		max-width: 155px;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 60px;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.emails-counter {
+			position: absolute;
+			top: 26px;
+    		right: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 31px;
+			height: 31px;
+			border-radius: 50%;
+			background-color: $primary;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 1;
+			color: $white;
+		}
+	}
+
+	.text {
+		max-width: 605px;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 18px;
+		line-height: calc(28 / 18);
+
+		p {
+			margin-bottom: 0;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+}

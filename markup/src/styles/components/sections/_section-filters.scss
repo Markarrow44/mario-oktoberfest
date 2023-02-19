@@ -1,0 +1,74 @@
+.section-filters {
+	position: relative;
+	z-index: 2;
+
+	.container {
+		max-width: 1220px;
+	}
+
+	.modal {
+		display: block !important;
+		background: rgba(255 ,255 ,255, .8);
+		backdrop-filter: blur(3px);
+		transform: translateY(100%);
+		opacity: 0;
+		pointer-events: none;
+		transition: .4s all;
+		z-index: -10;
+
+		@include media-breakpoint-up(mdl) {
+			background: #DDDDDD;
+			opacity: 1 !important;
+			display: block !important;
+			position: static !important;
+			background: transparent;
+			overflow-x: inherit;
+    		overflow-y: inherit;
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		&.show {
+			transform: translateY(0);
+			opacity: 1;
+			z-index: 1055;
+			pointer-events: all;
+		}
+	}
+
+	.modal-dialog {
+		max-width: 100%;
+		width: 100% !important;
+		margin: 0;
+		padding: 40px 36px 140px 36px;
+
+		@include media-breakpoint-up(mdl) {
+			transform: none !important;
+			padding: 0;
+		}
+	}
+
+	.modal-content {
+		display: block;
+		margin: 0 !important;
+		width: 100%;
+		max-width: 100%;
+		background: #DDDDDD;
+		border: 0;
+
+		@include media-breakpoint-up(mdl) {
+			padding: 0;
+			border: 0;
+			flex-direction: row;
+			height: 100%;
+		}
+	}
+}
+
+.hide-overaly  {
+	.modal-backdrop {
+		display: none;
+		pointer-events: none;
+	}	
+}
+
