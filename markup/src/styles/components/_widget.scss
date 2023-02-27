@@ -51,7 +51,7 @@
 			align-items: center;
 			justify-content: space-between;
 			border-bottom: 1px solid #ececee;
-			padding: 26px 32px;
+			padding: 16px 32px;
 		}
 
 		.img {
@@ -86,12 +86,12 @@
 				P {
 					color: $primary;
 					font-size: 18px;
-					line-height: calc(28 / 18);
+					line-height: 34px;
 					margin-bottom: 16px;
 
 					@include media-breakpoint-up(md) {
 						font-size: 16px;
-						line-height: calc(28 / 16);
+						line-height: 34px;
 						margin-bottom: 0;
 					}
 				}

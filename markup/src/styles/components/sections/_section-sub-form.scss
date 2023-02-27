@@ -13,20 +13,20 @@
 		border-radius: 8px;
 
 		@include media-breakpoint-up(lg) {
-			padding: 37px 32px 13px 72px;
+			padding: 24px 72px 32px 32px;
 		}
 
 		@include media-breakpoint-up(xl) {
-			padding: 37px 72px 13px 72px;
+			padding: 24px 72px 32px 32px;
 		}
 	}
 
 	.col-img {
-		max-width: 83px;
-		flex: 0 0 83px;
+		max-width: 164px;
+		flex: 0 0 164px;
 		margin: 0 auto 24px;
 
-		@include media-breakpoint-up(xl) {
+		@include media-breakpoint-up(lg) {
 			margin: 0;
 		}
 	}
@@ -36,7 +36,7 @@
 
 		@include media-breakpoint-up(lg) {
 			flex: 1 0 auto;
-			padding-left: 72px;
+			padding-left: 30px;
 		}
 
 		@include media-breakpoint-up(xl) {

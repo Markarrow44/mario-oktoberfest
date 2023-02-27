@@ -1,6 +1,6 @@
 nav.main-navigation.offcanvas.offcanvas-end(tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel")
 	.close-btn-holder
-		a(href="#").sub-cards-close: i.icon-chevrone-right
+		a(href="#").sub-cards-close: <svg width="15" height="22" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.875 15.25L1.125 8.5L7.875 1.75" stroke="#4090E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>
 		button(data-bs-dismiss="offcanvas" aria-label="Close").btn-close
 	.offcanvas-body
 		.inner
@@ -16,7 +16,7 @@ nav.main-navigation.offcanvas.offcanvas-end(tabindex="-1" id="offcanvasNavbar" a
 			.card-holder
 				.card-nav.dropdown-toggle(data-bs-toggle="dropdown" aria-expanded="false")
 					.text
-						h6 Paulaner Festzelt
+						h6 Festzelte
 						p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 					.img: img(src="./images/icon/nav-img.svg", width="102" , height="99" , alt="image decription")
 				.sub-cards.dropdown-menu
@@ -45,48 +45,38 @@ nav.main-navigation.offcanvas.offcanvas-end(tabindex="-1" id="offcanvasNavbar" a
 					li: a(href="#").link-button
 						span After Wiesn Locations
 					li: a(href="#").link-button
-						span Hotels
-					li: a(href="#").link-button
 						span Meine Reservierungen
 					li: a(href="#").link-button
 						span Über Uns
 					li: a(href="#").link-button
 						span Kontakt
 			.card-nav.warning
-				.text
-					h6 Werden Sie zum Wiesn-<mark>VIP</mark>
-					p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					a(href="#")
-						span Entdecken
-						i.icon-chevrone-right
-				.img: img(src="./images/img-icon-02.svg", width="89" , height="95" , alt="image decription")
+				a(href="#")
+					.text
+						h6 Werden Sie zum Wiesn-<mark>VIP</mark>
+						p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					.img: img(src="./images/img-icon-02.svg", width="70" , height="90" , alt="image decription")
 			.btn-holder
 				.row
 					.col-6
 						a(href="#").btn.btn-outline-primary Registrieren
 					.col-6
 						a(href="#").btn.btn-primary Jetzt Reservieren 
-		.d-flex.align-items-end.justify-content-between
-			.soc-netw
-				strong follow us on
-				ul
-					li: a(href="#"): i.icon-facebook-01
-					li: a(href="#"): i.icon-twitter
-					li: a(href="#"): i.icon-linkedin
-			.dropdown.dropdown-lang
-				button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
-					i.icon-lang
-					| Deutsch
-				ul.dropdown-menu(aria-labelledby='dropdownMenuButton1')
-					li
-						.fake-radio
-							input#en(type="radio" , name="lang")
-							label(for="en").dropdown-item 
-								span
-								| ENGLISCH
-					li
-						.fake-radio
-							input#de(type="radio" , name="lang")
-							label(for="de").dropdown-item 
-								span
-								| Deutsch
+			.row
+					.dropdown.dropdown-lang
+						button#dropdownMenuButton2.d-flex.d-md-none.align-items-center.justify-content-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+							i.icon-lang
+							| Deutsch
+						ul.dropdown-menu(aria-labelledby='dropdownMenuButton2')
+							li
+								.fake-radio
+									input#en(type="radio" , name="lang")
+									label(for="en").dropdown-item 
+										span
+										| Englisch
+							li
+								.fake-radio
+									input#de(type="radio" , name="lang")
+									label(for="de").dropdown-item 
+										span
+										| Deutsch

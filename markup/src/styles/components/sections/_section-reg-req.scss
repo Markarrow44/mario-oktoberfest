@@ -1,4 +1,5 @@
 .section-reg-req {
+	padding-top: 30px;
 	padding-bottom: 56px;
 
 	.heading {
@@ -18,7 +19,7 @@
 			line-height: 1;
 
 			@include media-breakpoint-up(md) {
-				font-size: 38px;
+				font-size: 36px;
 				line-height: calc(40 / 38);
 			}
 		}
@@ -57,4 +58,10 @@
 			}
 		}
 	}
+}
+
+#svgContainer3{
+	width: 100%;
+	height: 137px;
+	margin-bottom: 20px ;
 }

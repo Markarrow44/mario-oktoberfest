@@ -2,13 +2,17 @@ include _includes/_head
 	block content
 		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
 		include ./_layout/_nav
+		include ./_layout/_login
 		header#header
 			.container
 				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
 					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
 					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.item-text-icon
+							.img: img(src="./images/img-icon-02.svg", width="19" , height="24" , alt="Werde Wiesn-VIP")
+							strong Werde Wiesn<span>-VIP</span>
 						.login-holder
-							a(href="#" data-bs-toggle="modal" data-bs-target="#register").link Login
+							a(href="#" data-bs-toggle="modal" data-bs-target="#login").link Login
 							//- .is-logged
 							//- 	.avatar: img(src="./images/icon/avatar.svg", alt="user")
 							//- 	.user-name Dominik Pfeiffer
@@ -22,7 +26,7 @@ include _includes/_head
 										input#en(type="radio" , name="lang")
 										label(for="en").dropdown-item 
 											span
-											| ENGLISCH
+											| Englisch
 								li
 									.fake-radio
 										input#de(type="radio" , name="lang")
@@ -42,19 +46,20 @@ include _includes/_head
 			section.section-sub-form
 				.container
 					.inner
-						.d-lg-flex
+						.d-lg-flex.align-items-end
 							.col-img
-								img(src="./images/clock.svg", width="83" , height="86" , alt="image decription")
+								#svgContainer4
+								//- img(src="./images/img-icon-01.svg", width="83" , height="86" , alt="image decription")
 							.col-form
 								h2 Erinnerungsfunktion
 								form(action="#").form-subscr
 									.row
 										.col-lg-4
 											label(for="name").d-lg-none Ihre Name
-											input#name(type="text", placeholder="name")
+											input#name(type="text", placeholder="Name")
 										.col-lg-4
 											label(for="E-Mail").d-lg-none E-Mail
-											input(type="email", placeholder="Email")
+											input(type="email", placeholder="E-Mail")
 										.col-lg-4
 											button.btn.btn-primary Erinnerungsfunktion setzen
 			section.section-auto-reserv
@@ -62,7 +67,8 @@ include _includes/_head
 					.inner
 						.d-lg-flex.align-items-center
 							.col-img
-								<img src="./images/img-icon-01.svg" width="164" height="196" alt="image description">
+								#svgContainer3
+								//- <img src="./images/img-icon-04.svg" width="164" height="148" alt="image description">
 							.col-text.text-center.text-lg-start
 								h2 Automatische Reservierungsanfrage
 								p Du willst auf Nummer sicher gehen? Für <mark>€ 9,90</mark> kümmern wir uns darum, dass deine Reservierungsanfrage verschickt wird, sobald das Portal geöffnet ist. Du kannst jetzt gleich das Formular ausfüllen und brauchst im Anschluss nichts mehr machen. Wir erledigen alles für dich.

@@ -25,11 +25,11 @@ body {
 */
 a {
   @include transition(color);
-  color: $link-color;
+  color: #4090e7;
   text-decoration: $link-decoration;
 
   &:hover {
-    color: $link-hover-color;
+    color: #4090e7;
     text-decoration: $link-hover-decoration;
   }
 }

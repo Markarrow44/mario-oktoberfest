@@ -8,11 +8,23 @@ include _includes/_head
 				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
 					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
 					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
-						.login-holder
-							.is-logged
+						.item-text-icon
+							.img: img(src="./images/img-icon-02.svg", width="19" , height="24" , alt="Werde Wiesn-VIP")
+							strong Werde Wiesn<span>-VIP</span>
+						.login-holder.dropdown
+							.is-logged#dropdownMenuButton2(type='button' data-bs-toggle='dropdown' aria-expanded='false')
 								.avatar: img(src="./images/icon/avatar.svg", alt="user")
 								.user-name Dominik Pfeiffer
-						.dropdown
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton2')
+									li
+										a(href="#").d-flex.align-items-center
+											i.icon-persone
+											span Benutzerkonto
+									li
+										a(href="#").d-flex.align-items-center
+											i.icon-subsc
+											span Abmeldung
+						.dropdown.lang
 							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
 								i.icon-lang
 								| Deutsch
@@ -22,7 +34,7 @@ include _includes/_head
 										input#en(type="radio" , name="lang")
 										label(for="en").dropdown-item 
 											span
-											| ENGLISCH
+											| Englisch
 								li
 									.fake-radio
 										input#de(type="radio" , name="lang")
@@ -32,6 +44,7 @@ include _includes/_head
 					.toggle-btn-holder.order-2.order-md-1
 						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
 							span
+							
 		main#main
 			section.section-order.paymant-from.account
 				.container
@@ -48,13 +61,13 @@ include _includes/_head
 											h6 Profilbild
 											ul.d-flex
 												li
-													span: img(src="./images/user-img-01.svg" width="69" height="79" )
+													span: img(src="./images/user-img-01.svg" width="115" height="115" )
 												li
-													span: img(src="./images/user-img-02.svg" width="55" height="79" )
+													span: img(src="./images/user-img-02.svg" width="115" height="115" )
 												li
-													span: img(src="./images/user-img-03.svg" width="84" height="71" )
+													span: img(src="./images/user-img-03.svg" width="115" height="115" )
 												li
-													span: img(src="./images/user-img-04.png" width="115" height="115" )
+													span: img(src="./images/user-img-04.svg" width="115" height="115" )
 											.row
 												.col-md-6
 													label Geschlecht
@@ -140,7 +153,7 @@ include _includes/_head
 											.text
 												p Deine Mitgliedschaft
 												h3.h1 Wiesn-VIP
-											.img: img(src="./images/img-icon-02.svg", width="82" , height="88" , alt="image decription")
+											.img: img(src="./images/img-icon-02.svg", width="150" , height="88" , alt="image decription")
 										ul.widget-list
 											li
 												i.icon-check

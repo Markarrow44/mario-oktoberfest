@@ -74,6 +74,17 @@
 			font-size: 14px;
 			color: $primary;
 		}
+
+		 span{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 63px;
+			height: 63px;
+			background: #E9EFF6;
+			border-radius: 50%;
+			overflow: hidden;
+		}
 	}
 
 	.card-footer {

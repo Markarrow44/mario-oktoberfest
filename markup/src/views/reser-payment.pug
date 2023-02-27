@@ -13,26 +13,26 @@ include _includes/_head
 									.form-mobile-style
 										.payment-header
 											i.icon-card
-											span Payment
+											span Bezahlung
 										.payment-content
 											.payment-service
 												h6 Unsere Zahlungsarten
 											ul.d-flex
 												li
 													label(for="paypal")
-														input#paypal(type="checkbox")
+														input#paypal(type="radio" name="card-payment" value="paypal")
 														span: img(src="./images/paypal.svg", width="68" , height="26" ,alt="paypal")
 												li
 													label(for="visa")
-														input#visa(type="checkbox")
+														input#visa(type="radio" name="card-payment" value="visa")
 														span: img(src="./images/visa.svg", width="56" , height="30" ,alt="visa")
 												li
 													label(for="mastercard")
-														input#mastercard(type="checkbox")
+														input#mastercard(type="radio" name="card-payment" value="mastercard")
 														span: img(src="./images/mastercard.svg", width="56" , height="30" ,alt="mastercard")
 												li
 													label(for="applepay")
-														input#applepay(type="checkbox")
+														input#applepay(type="radio" name="card-payment" value="applepay")
 														span: img(src="./images/applepay.svg", width="56" , height="30" ,alt="applepay")
 											.row
 												.col-md-6
@@ -58,7 +58,8 @@ include _includes/_head
 											.card-header
 												.d-flex.align-items-center
 													.col-logo
-														.user-logo: img(src="./images/user-logo.png", width="63" , height="63" ,alt="user logo")
+														//- .user-logo: img(src="./images/user-logo.png", width="63" , height="63" ,alt="user logo")
+														span.user-logo: img(src="./images/user-img-01.svg" width="63" height="63" )
 													.col-info
 														strong.user-name Dominik Pfeiffer
 														.user-email d.pfeiffer@linksderisar.com

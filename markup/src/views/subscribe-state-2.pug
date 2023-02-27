@@ -2,17 +2,21 @@ include _includes/_head
 	block content
 		<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
 		include ./_layout/_nav
+		include ./_layout/_login
 		header#header
 			.container
 				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
 					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
 					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
+						.item-text-icon
+							.img: img(src="./images/img-icon-02.svg", width="19" , height="24" , alt="Werde Wiesn-VIP")
+							strong Werde Wiesn<span>-VIP</span>
 						.login-holder
-							a(href="#" data-bs-toggle="modal" data-bs-target="#register").link Login
+							a(href="#" data-bs-toggle="modal" data-bs-target="#login").link Login
 							//- .is-logged
 							//- 	.avatar: img(src="./images/icon/avatar.svg", alt="user")
 							//- 	.user-name Dominik Pfeiffer
-						.dropdown
+						.dropdown.lang
 							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
 								i.icon-lang
 								| Deutsch
@@ -22,7 +26,7 @@ include _includes/_head
 										input#en(type="radio" , name="lang")
 										label(for="en").dropdown-item 
 											span
-											| ENGLISCH
+											| Englisch
 								li
 									.fake-radio
 										input#de(type="radio" , name="lang")
@@ -44,10 +48,12 @@ include _includes/_head
 					.inner
 						.heading
 							span ... fast fertig
-							h2 Email Adresse bestätigen
-						.email-logo
-							img(src="./images/email-logo.svg", width="155" , height="149" , alt="email logo")
-							.emails-counter 4
+							h2 E-Mail Adresse bestätigen
+						#svgContainer5
+						//- .email-logo
+						//- 	#svgContainer5
+							//- img(src="./images/email-logo.svg", width="155" , height="149" , alt="email logo")
+							//- .emails-counter 4
 						.text
 							p Wir haben dir eine Email an <br class="d-block d-md-none" /> <a href="mailto:d.pfeiffer@linksderisar.com">d.pfeiffer@linksderisar.com</a>  <br class="d-block d-md-none" /> gesendet. Bitte bestätige deine Email Adresse durch einen klick auf den Link in der Email.
 		include _includes/_footer

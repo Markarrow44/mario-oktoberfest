@@ -26,7 +26,10 @@
 			<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
 			<nav class="main-navigation offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 				<div class="close-btn-holder">
-					<a class="sub-cards-close" href="#"><i class="icon-chevrone-right"></i></a><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					<a class="sub-cards-close" href="#"
+						><svg width="15" height="22" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.875 15.25L1.125 8.5L7.875 1.75" stroke="#4090E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></a
+					><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
 				<div class="offcanvas-body">
 					<div class="inner">
@@ -42,7 +45,7 @@
 						<div class="card-holder">
 							<div class="card-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 								<div class="text">
-									<h6>Paulaner Festzelt</h6>
+									<h6>Festzelte</h6>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 								</div>
 								<div class="img"><img src="./images/icon/nav-img.svg" width="102" height="99" alt="image decription" /></div>
@@ -76,9 +79,6 @@
 									<a class="link-button" href="#"><span>After Wiesn Locations</span></a>
 								</li>
 								<li>
-									<a class="link-button" href="#"><span>Hotels</span></a>
-								</li>
-								<li>
 									<a class="link-button" href="#"><span>Meine Reservierungen</span></a>
 								</li>
 								<li>
@@ -90,12 +90,13 @@
 							</ul>
 						</div>
 						<div class="card-nav warning">
-							<div class="text">
-								<h6>Werden Sie zum Wiesn-<mark>VIP</mark></h6>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								<a href="#"><span>Entdecken</span><i class="icon-chevrone-right"></i></a>
-							</div>
-							<div class="img"><img src="./images/img-icon-02.svg" width="89" height="95" alt="image decription" /></div>
+							<a href="#"
+								><div class="text">
+									<h6>Werden Sie zum Wiesn-<mark>VIP</mark></h6>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								</div>
+								<div class="img"><img src="./images/img-icon-02.svg" width="70" height="90" alt="image decription" /></div
+							></a>
 						</div>
 						<div class="btn-holder">
 							<div class="row">
@@ -103,44 +104,30 @@
 								<div class="col-6"><a class="btn btn-primary" href="#">Jetzt Reservieren </a></div>
 							</div>
 						</div>
-					</div>
-					<div class="d-flex align-items-end justify-content-between">
-						<div class="soc-netw">
-							<strong>follow us on</strong>
-							<ul>
-								<li>
-									<a href="#"><i class="icon-facebook-01"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="icon-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="icon-linkedin"></i></a>
-								</li>
-							</ul>
-						</div>
-						<div class="dropdown dropdown-lang">
-							<button
-								class="d-md-flex align-items-md-center btn btn-secondary dropdown-toggle"
-								id="dropdownMenuButton1"
-								type="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								<i class="icon-lang"></i>Deutsch
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-								<li>
-									<div class="fake-radio">
-										<input id="en" type="radio" name="lang" /><label class="dropdown-item" for="en"> <span></span>ENGLISCH</label>
-									</div>
-								</li>
-								<li>
-									<div class="fake-radio">
-										<input id="de" type="radio" name="lang" /><label class="dropdown-item" for="de"> <span></span>Deutsch</label>
-									</div>
-								</li>
-							</ul>
+						<div class="row">
+							<div class="dropdown dropdown-lang">
+								<button
+									class="d-flex d-md-none align-items-center justify-content-center btn btn-secondary dropdown-toggle"
+									id="dropdownMenuButton2"
+									type="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									<i class="icon-lang"></i>Deutsch
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+									<li>
+										<div class="fake-radio">
+											<input id="en" type="radio" name="lang" /><label class="dropdown-item" for="en"> <span></span>Englisch</label>
+										</div>
+									</li>
+									<li>
+										<div class="fake-radio">
+											<input id="de" type="radio" name="lang" /><label class="dropdown-item" for="de"> <span></span>Deutsch</label>
+										</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -152,13 +139,25 @@
 							<a href="3"><img src="./images/logo.svg" width="148" height="50" alt="oktoberfest booking.com" /></a>
 						</div>
 						<div class="navbar-collapse collapse order-3 order-md-1 justify-content-md-end" id="navbarSupportedContent">
-							<div class="login-holder">
-								<div class="is-logged">
+							<div class="item-text-icon">
+								<div class="img"><img src="./images/img-icon-02.svg" width="19" height="24" alt="Werde Wiesn-VIP" /></div>
+								<strong>Werde Wiesn<span>-VIP</span></strong>
+							</div>
+							<div class="login-holder dropdown">
+								<div class="is-logged" id="dropdownMenuButton2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 									<div class="avatar"><img src="./images/icon/avatar.svg" alt="user" /></div>
 									<div class="user-name">Dominik Pfeiffer</div>
 								</div>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+									<li>
+										<a class="d-flex align-items-center" href="#"><i class="icon-persone"></i><span>Benutzerkonto</span></a>
+									</li>
+									<li>
+										<a class="d-flex align-items-center" href="#"><i class="icon-subsc"></i><span>Abmeldung</span></a>
+									</li>
+								</ul>
 							</div>
-							<div class="dropdown">
+							<div class="dropdown lang">
 								<button
 									class="d-md-flex align-items-md-center btn btn-secondary dropdown-toggle"
 									id="dropdownMenuButton1"
@@ -171,7 +170,7 @@
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 									<li>
 										<div class="fake-radio">
-											<input id="en" type="radio" name="lang" /><label class="dropdown-item" for="en"> <span></span>ENGLISCH</label>
+											<input id="en" type="radio" name="lang" /><label class="dropdown-item" for="en"> <span></span>Englisch</label>
 										</div>
 									</li>
 									<li>
@@ -191,14 +190,16 @@
 			<main id="main">
 				<section class="section-order paymant-from account">
 					<div class="container">
-						<h1 class="hero-title sm text-center text-md-start">Kontakt</h1>
 						<div class="row">
 							<div class="col-acc">
 								<form class="payment-form" action="#">
 									<div class="block-payment block-contact">
 										<div class="heading-content">
-											<strong>Noch Fragen?</strong>
-											<h2 class="h1">Kontaktieren Sie uns gerne.</h2>
+											<strong>Oktoberfest Booking</strong>
+											<h2>
+												Du hast noch Fragen? <br />
+												Schreib uns eine Nachricht
+											</h2>
 										</div>
 										<div class="payment-header">
 											<div class="row">
@@ -231,7 +232,7 @@
 													<p>Geschäftsführer</p>
 													<h2 class="d-none d-md-block">Dr. Dominik Pfeiffer</h2>
 												</div>
-												<div class="img"><img src="./images/user-img-04.png" width="82" height="88" alt="image decription" /></div>
+												<div class="img"><img class="kontakt-img" src="./images/user-img-04.png" width="82" height="88" alt="image decription" /></div>
 												<h2 class="d-md-none">Dr. Dominik Pfeiffer</h2>
 											</div>
 											<ul class="user-contact">
@@ -327,7 +328,7 @@
 									</div>
 									<div class="col-md-4">
 										<nav class="nav-item">
-											<strong data-bs-toggle="collapse" data-bs-target="#menu-03" aria-expanded="false" aria-controls="cmenu-03">Sonstiges</strong>
+											<strong data-bs-toggle="collapse" data-bs-target="#menu-03" aria-expanded="false" aria-controls="cmenu-03">Erreichen Uns</strong>
 											<ul class="collapse" id="menu-03">
 												<li><a href="#">Über uns</a></li>
 												<li><a href="#">Festzelt OS</a></li>

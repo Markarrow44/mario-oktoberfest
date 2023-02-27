@@ -9,7 +9,7 @@ include _includes/_head
 					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
 					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
 						.item-text-icon
-							.img: img(src="./images/img-icon-02.svg", width="40" , height="38" , alt="Werde Wiesn-VIP")
+							.img: img(src="./images/img-icon-02.svg", width="19" , height="24" , alt="Werde Wiesn-VIP")
 							strong Werde Wiesn<span>-VIP</span>
 						.login-holder.dropdown
 							.is-logged#dropdownMenuButton2(type='button' data-bs-toggle='dropdown' aria-expanded='false')
@@ -22,15 +22,9 @@ include _includes/_head
 											span Benutzerkonto
 									li
 										a(href="#").d-flex.align-items-center
-											.img.warning
-												<img src="./images/img-icon-02.svg" width="23" height="29" alt="Werde Wiesn-VIP">
-												<img class="hover" src="./images/img-icon-03.svg" width="23" height="29" alt="Werde Wiesn-VIP">
-											span Werde Wiesn VIP
-									li
-										a(href="#").d-flex.align-items-center
 											i.icon-subsc
 											span Abmeldung
-						.dropdown
+						.dropdown.lang
 							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
 								i.icon-lang
 								| Deutsch
@@ -40,7 +34,7 @@ include _includes/_head
 										input#en(type="radio" , name="lang")
 										label(for="en").dropdown-item 
 											span
-											| ENGLISCH
+											| Englisch
 								li
 									.fake-radio
 										input#de(type="radio" , name="lang")
@@ -50,6 +44,7 @@ include _includes/_head
 					.toggle-btn-holder.order-2.order-md-1
 						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
 							span
+							
 		main#main
 			section.section-hero.section-hero-lg
 				.container
@@ -79,7 +74,7 @@ include _includes/_head
 								.inner.d-flex.flex-wrap
 									.col-text
 										.card-text
-											h2 Das Festzelt
+											h2 Über Festzelt OS
 											.collapse-wrap
 												p Festzelt OS ist das cloudbasierte Reservierungssystem für Festzelte: Das Festzelt OS kann den gesamten Workflow eines Reservierungsbüros abbilden: Tische und ihre Verfügbarkeit anzeigen, Rechnungen und Buchungsbestätigungen versenden, Verzehrgutscheine verwalten und vor Ort den Einlass koordinieren. Neben der eigentlichen Reservierungslösung bietet Festzelt OS eine Vielzahl an weitere Lösungen rund um das Management eine Festzeltbetriebes ab: z.B. Individuelle Apps für Festzelte, Personalmanagement-Tools oder Kontoführungstools. Sprechen Sie uns gerne zu unseren Lösungen an.
 									.col-card
@@ -87,7 +82,7 @@ include _includes/_head
 											.card-image.d-flex
 												img(src="./images/card-img-07.jpg", width="457" , height="341" , alt="image description")
 												.card-logo: img(src="./images/festwiese-os_logo.svg", width="93" , height="101" alt="fest zelt")
-											.card-content.d-none.d-md-block
+											.card-content.d-block
 												.collapse-item
 													a(href=""  role="button" aria-expanded="false")
 														i.icon-chevron-down-radius

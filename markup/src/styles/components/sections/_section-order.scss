@@ -11,6 +11,17 @@
 				// margin-bottom: 43px;
 			}
 		}
+
+		.card-header span{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 63px;
+			height: 63px;
+			background: #E9EFF6;
+			border-radius: 50%;
+			overflow: hidden;
+		}
 	}
 
 	&.account {
@@ -18,7 +29,7 @@
 			padding-bottom: 0;
 
 			+ .block-payment {
-				margin-top: 16px;
+				margin-top: 24px;
 			}
 		}
 
@@ -56,6 +67,9 @@
 
 	img {
 		max-width: 100%;
+		// height: auto;
+	}
+	.kontakt-img{
 		height: auto;
 	}
 
@@ -119,7 +133,7 @@
 		border: 1px solid #fff;
 
 		@include media-breakpoint-up(lg) {
-			padding: 24px 0 10px 40px;
+			padding: 24px 0 8px 40px;
 		}
 
 		ul {
@@ -166,20 +180,20 @@
 	}
 
 	.heading-content {
-		padding-bottom: 24px;
-		margin-bottom: 24px;
+		padding-bottom: 43px;
+    	margin-bottom: 40px;
 		border-bottom: 1px solid #ECECEE;
 
 		@include media-breakpoint-up(md) {
-			padding-bottom: 40px;
-			margin-bottom: 40px;
+			padding-bottom: 43px;
+    		margin-bottom: 40px;
 		}
 
 		strong {
+			color: #4090e7;
 			font-weight: 400;
-			font-size: 18px;
-			line-height: calc(28 / 18);
-			color: #9499A3;
+			font-size: 16px;
+			line-height: 28px;
 
 			@include media-breakpoint-up(md) {
 				font-size: 16px;
@@ -314,7 +328,7 @@
 	label {
 		display: block;
 		text-align: center;
-		padding: 10px 0;
+		padding: 4px 0;
 		cursor: pointer;
 
 		input[type='text'] {
@@ -529,6 +543,10 @@
 		&.open {
 			display: flex;
 
+			.inner {
+				border-color: $primary;
+			}
+
 			.checkbox-list {
 				display: block;
 			}
@@ -651,6 +669,9 @@
 			@include media-breakpoint-up(md) {
 				max-width: 107px;
 				flex: 0 0 107px;
+				display: flex;
+					align-items: center;
+					justify-content: center;
 			}
 		}
 
@@ -714,6 +735,9 @@
 				@include media-breakpoint-up(md) {
 					max-width: 102px;
 					flex: 0 0 102px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
 				}
 			}
 
@@ -740,7 +764,7 @@
 
 #collapse-06 {
 	label {
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 12px;
+		padding-bottom: 12px;
 	}
 }

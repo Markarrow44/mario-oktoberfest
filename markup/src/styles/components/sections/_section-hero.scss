@@ -187,7 +187,7 @@
 			right: calc(34px + var(--bs-gutter-x) * .5);
 
 			&.is-fixed {
-				right: calc(34px + var(--bs-gutter-x) * .5);
+				right: calc(8px + var(--bs-gutter-x) * .5);
 				width: 70px;
 				height: 70px;
 				padding: 0;
@@ -206,6 +206,10 @@
 				opacity: 0;
 				pointer-events: none;
 			}
+		}
+
+		@include media-breakpoint-down(md){
+			right: 8px;
 		}
 	}
 }

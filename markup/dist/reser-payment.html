@@ -24,34 +24,57 @@
 		<a class="accessibility" href="#main">Skip to Content</a><noscript><div>Javascript must be enabled for the correct page display</div></noscript>
 		<div class="wrapper">
 			<noscript><div>Javascript must be enabled for the correct page display</div></noscript>
-			<div class="modal fade" id="register" tabindex="-1" aria-hidden="true" aria-modal="true">
+			<div class="modal fade" id="login" tabindex="-1" aria-hidden="true" aria-modal="true">
 				<div class="modal-dialog">
 					<div class="block-modal-register">
 						<div class="heading">
 							<a href="#">Oktoberfest Booking</a>
-							<h2>Registrieren</h2>
+							<h2>Log In</h2>
 						</div>
-						<div class="btn-group">
-							<a class="btn btn-primary" href="#"> <img src="./images/icon/facebook.svg" width="25" height="25" alt="Facebook" /><span>Continue with Facebook</span></a
-							><a class="btn btn-light" href="#"> <img src="./images/icon/google.svg" width="23" height="23" alt="Facebook" /><span>Continue with Google</span></a>
-						</div>
-						<div class="divider"><span>oder</span></div>
-						<form action="#">
+						<form class="was-validated" action="#">
 							<div class="form-inner">
 								<div class="row">
-									<div class="col-12"><label for="email">Email Adresse</label><input id="email" type="email" placeholder="Email Adresse" /></div>
-									<div class="col-12"><label for="passwort">Passwort </label><input id="passwort" type="text" placeholder="Passwort" /></div>
-									<div class="col-12"><label for="pass">Passwort bestätigen </label><input id="pass" type="text" placeholder="Passwort  bestätigen " /></div>
+									<div class="col-12 form-check">
+										<label for="email">Email Adresse</label><input class="form-check-input" id="email" type="email" placeholder="Email Adresse" required />
+										<div class="invalid-feedback">Please enter a valid E-Mail Adress</div>
+									</div>
+									<div class="col-12"><label for="passwort">Passwort </label><input id="passwort" type="text" placeholder="Passwort" required /></div>
 								</div>
 							</div>
-							<button class="btn btn-primary">Registrieren</button>
+							<div class="block-remb d-flex">
+								<div class="fake-checkbox">
+									<input id="remeber" type="checkbox" /><label for="remeber"><span></span>Remember Me</label>
+								</div>
+								<a href="#">Forgot Password?</a>
+							</div>
+							<div class="divider mb-1"><span>oder</span></div>
+							<div class="btn-group-login">
+								<div class="row">
+									<div class="col-4">
+										<a class="btn btn-primary facebook" href="#"><img src="./images/icon/facebook.svg" width="25" height="25" alt="Facebook" /><span>Facebook</span></a>
+									</div>
+									<div class="col-4">
+										<a class="btn btn-light google" href="#"><img src="./images/icon/google-white.svg" width="23" height="23" alt="Facebook" /><span>Google</span></a>
+									</div>
+									<div class="col-4">
+										<a class="btn btn-light twitter" href="#"><img src="./images/icon/twitter-white.svg" width="22" height="16" alt="Facebook" /><span>Twitter</span></a>
+									</div>
+								</div>
+							</div>
+							<div class="text text-center">
+								<p>Don’t have an account? <a href="#">Sign up for free</a></p>
+							</div>
+							<button class="btn btn-primary">Log In</button>
 						</form>
 					</div>
 				</div>
 			</div>
 			<nav class="main-navigation offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 				<div class="close-btn-holder">
-					<a class="sub-cards-close" href="#"><i class="icon-chevrone-right"></i></a><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					<a class="sub-cards-close" href="#"
+						><svg width="15" height="22" viewBox="0 0 13 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.875 15.25L1.125 8.5L7.875 1.75" stroke="#4090E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></a
+					><button class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 				</div>
 				<div class="offcanvas-body">
 					<div class="inner">
@@ -67,7 +90,7 @@
 						<div class="card-holder">
 							<div class="card-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 								<div class="text">
-									<h6>Paulaner Festzelt</h6>
+									<h6>Festzelte</h6>
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 								</div>
 								<div class="img"><img src="./images/icon/nav-img.svg" width="102" height="99" alt="image decription" /></div>
@@ -101,9 +124,6 @@
 									<a class="link-button" href="#"><span>After Wiesn Locations</span></a>
 								</li>
 								<li>
-									<a class="link-button" href="#"><span>Hotels</span></a>
-								</li>
-								<li>
 									<a class="link-button" href="#"><span>Meine Reservierungen</span></a>
 								</li>
 								<li>
@@ -115,12 +135,13 @@
 							</ul>
 						</div>
 						<div class="card-nav warning">
-							<div class="text">
-								<h6>Werden Sie zum Wiesn-<mark>VIP</mark></h6>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								<a href="#"><span>Entdecken</span><i class="icon-chevrone-right"></i></a>
-							</div>
-							<div class="img"><img src="./images/img-icon-02.svg" width="89" height="95" alt="image decription" /></div>
+							<a href="#"
+								><div class="text">
+									<h6>Werden Sie zum Wiesn-<mark>VIP</mark></h6>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								</div>
+								<div class="img"><img src="./images/img-icon-02.svg" width="70" height="90" alt="image decription" /></div
+							></a>
 						</div>
 						<div class="btn-holder">
 							<div class="row">
@@ -128,44 +149,30 @@
 								<div class="col-6"><a class="btn btn-primary" href="#">Jetzt Reservieren </a></div>
 							</div>
 						</div>
-					</div>
-					<div class="d-flex align-items-end justify-content-between">
-						<div class="soc-netw">
-							<strong>follow us on</strong>
-							<ul>
-								<li>
-									<a href="#"><i class="icon-facebook-01"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="icon-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="icon-linkedin"></i></a>
-								</li>
-							</ul>
-						</div>
-						<div class="dropdown dropdown-lang">
-							<button
-								class="d-md-flex align-items-md-center btn btn-secondary dropdown-toggle"
-								id="dropdownMenuButton1"
-								type="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								<i class="icon-lang"></i>Deutsch
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-								<li>
-									<div class="fake-radio">
-										<input id="en" type="radio" name="lang" /><label class="dropdown-item" for="en"> <span></span>ENGLISCH</label>
-									</div>
-								</li>
-								<li>
-									<div class="fake-radio">
-										<input id="de" type="radio" name="lang" /><label class="dropdown-item" for="de"> <span></span>Deutsch</label>
-									</div>
-								</li>
-							</ul>
+						<div class="row">
+							<div class="dropdown dropdown-lang">
+								<button
+									class="d-flex d-md-none align-items-center justify-content-center btn btn-secondary dropdown-toggle"
+									id="dropdownMenuButton2"
+									type="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									<i class="icon-lang"></i>Deutsch
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+									<li>
+										<div class="fake-radio">
+											<input id="en" type="radio" name="lang" /><label class="dropdown-item" for="en"> <span></span>Englisch</label>
+										</div>
+									</li>
+									<li>
+										<div class="fake-radio">
+											<input id="de" type="radio" name="lang" /><label class="dropdown-item" for="de"> <span></span>Deutsch</label>
+										</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -177,8 +184,12 @@
 							<a href="3"><img src="./images/logo.svg" width="148" height="50" alt="oktoberfest booking.com" /></a>
 						</div>
 						<div class="navbar-collapse collapse order-3 order-md-1 justify-content-md-end" id="navbarSupportedContent">
-							<div class="login-holder"><a class="link" href="#" data-bs-toggle="modal" data-bs-target="#register">Login</a></div>
-							<div class="dropdown">
+							<div class="item-text-icon">
+								<div class="img"><img src="./images/img-icon-02.svg" width="19" height="24" alt="Werde Wiesn-VIP" /></div>
+								<strong>Werde Wiesn<span>-VIP</span></strong>
+							</div>
+							<div class="login-holder"><a class="link" href="#" data-bs-toggle="modal" data-bs-target="#login">Login</a></div>
+							<div class="dropdown lang">
 								<button
 									class="d-md-flex align-items-md-center btn btn-secondary dropdown-toggle"
 									id="dropdownMenuButton1"
@@ -191,7 +202,7 @@
 								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 									<li>
 										<div class="fake-radio">
-											<input id="en" type="radio" name="lang" /><label class="dropdown-item" for="en"> <span></span>ENGLISCH</label>
+											<input id="en" type="radio" name="lang" /><label class="dropdown-item" for="en"> <span></span>Englisch</label>
 										</div>
 									</li>
 									<li>
@@ -217,28 +228,31 @@
 								<div class="block-payment">
 									<form class="payment-form" action="#">
 										<div class="form-mobile-style">
-											<div class="payment-header"><i class="icon-card"></i><span>Payment</span></div>
+											<div class="payment-header"><i class="icon-card"></i><span>Bezahlung</span></div>
 											<div class="payment-content">
 												<div class="payment-service"><h6>Unsere Zahlungsarten</h6></div>
 												<ul class="d-flex">
 													<li>
 														<label for="paypal"
-															><input id="paypal" type="checkbox" /><span><img src="./images/paypal.svg" width="68" height="26" alt="paypal" /></span
+															><input id="paypal" type="radio" name="card-payment" value="paypal" /><span
+																><img src="./images/paypal.svg" width="68" height="26" alt="paypal" /></span
 														></label>
 													</li>
 													<li>
 														<label for="visa"
-															><input id="visa" type="checkbox" /><span><img src="./images/visa.svg" width="56" height="30" alt="visa" /></span
+															><input id="visa" type="radio" name="card-payment" value="visa" /><span><img src="./images/visa.svg" width="56" height="30" alt="visa" /></span
 														></label>
 													</li>
 													<li>
 														<label for="mastercard"
-															><input id="mastercard" type="checkbox" /><span><img src="./images/mastercard.svg" width="56" height="30" alt="mastercard" /></span
+															><input id="mastercard" type="radio" name="card-payment" value="mastercard" /><span
+																><img src="./images/mastercard.svg" width="56" height="30" alt="mastercard" /></span
 														></label>
 													</li>
 													<li>
 														<label for="applepay"
-															><input id="applepay" type="checkbox" /><span><img src="./images/applepay.svg" width="56" height="30" alt="applepay" /></span
+															><input id="applepay" type="radio" name="card-payment" value="applepay" /><span
+																><img src="./images/applepay.svg" width="56" height="30" alt="applepay" /></span
 														></label>
 													</li>
 												</ul>
@@ -262,7 +276,7 @@
 											<div class="card-header">
 												<div class="d-flex align-items-center">
 													<div class="col-logo">
-														<div class="user-logo"><img src="./images/user-logo.png" width="63" height="63" alt="user logo" /></div>
+														<span class="user-logo"><img src="./images/user-img-01.svg" width="63" height="63" /></span>
 													</div>
 													<div class="col-info">
 														<strong class="user-name">Dominik Pfeiffer</strong>
@@ -387,7 +401,7 @@
 									</div>
 									<div class="col-md-4">
 										<nav class="nav-item">
-											<strong data-bs-toggle="collapse" data-bs-target="#menu-03" aria-expanded="false" aria-controls="cmenu-03">Sonstiges</strong>
+											<strong data-bs-toggle="collapse" data-bs-target="#menu-03" aria-expanded="false" aria-controls="cmenu-03">Erreichen Uns</strong>
 											<ul class="collapse" id="menu-03">
 												<li><a href="#">Über uns</a></li>
 												<li><a href="#">Festzelt OS</a></li>

@@ -7,11 +7,23 @@ include _includes/_head
 				nav.navbar.navbar-expand-md.d-md-flex.justify-content-md-between
 					.navbar-brand.order-md-1: a(href="3"): img(src="./images/logo.svg", width="148" , height="50" , alt="oktoberfest booking.com")
 					#navbarSupportedContent.navbar-collapse.collapse.order-3.order-md-1.justify-content-md-end
-						.login-holder
-							.is-logged
+						.item-text-icon
+							.img: img(src="./images/img-icon-02.svg", width="19" , height="24" , alt="Werde Wiesn-VIP")
+							strong Werde Wiesn<span>-VIP</span>
+						.login-holder.dropdown
+							.is-logged#dropdownMenuButton2(type='button' data-bs-toggle='dropdown' aria-expanded='false')
 								.avatar: img(src="./images/icon/avatar.svg", alt="user")
 								.user-name Dominik Pfeiffer
-						.dropdown
+							ul.dropdown-menu(aria-labelledby='dropdownMenuButton2')
+									li
+										a(href="#").d-flex.align-items-center
+											i.icon-persone
+											span Benutzerkonto
+									li
+										a(href="#").d-flex.align-items-center
+											i.icon-subsc
+											span Abmeldung
+						.dropdown.lang
 							button#dropdownMenuButton1.d-md-flex.align-items-md-center.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
 								i.icon-lang
 								| Deutsch
@@ -21,7 +33,7 @@ include _includes/_head
 										input#en(type="radio" , name="lang")
 										label(for="en").dropdown-item 
 											span
-											| ENGLISCH
+											| Englisch
 								li
 									.fake-radio
 										input#de(type="radio" , name="lang")
@@ -31,17 +43,17 @@ include _includes/_head
 					.toggle-btn-holder.order-2.order-md-1
 						button.d-block(class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar")
 							span
+							
 		main#main
 			section.section-order.paymant-from.account
 				.container
-					h1.hero-title.sm.text-center.text-md-start Kontakt
 					.row
 						.col-acc
 							form.payment-form(action="#")
 								.block-payment.block-contact
 									.heading-content
-										strong Noch Fragen?
-										h2.h1 Kontaktieren Sie uns gerne.
+										strong Oktoberfest Booking
+										h2 Du hast noch Fragen? <br> Schreib uns eine Nachricht
 									.payment-header
 											.row
 												.col-md-6
@@ -74,7 +86,7 @@ include _includes/_head
 											.text.user-info
 												p Geschäftsführer
 												h2.d-none.d-md-block Dr. Dominik Pfeiffer
-											.img: img(src="./images/user-img-04.png", width="82" , height="88" , alt="image decription")
+											.img: img.kontakt-img(src="./images/user-img-04.png", width="82" , height="88" , alt="image decription")
 											h2.d-md-none Dr. Dominik Pfeiffer
 										ul.user-contact
 											li: a(href="tel:49089540455720") 

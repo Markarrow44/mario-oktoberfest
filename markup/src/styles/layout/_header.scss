@@ -55,7 +55,6 @@
 		font-weight: 600;
 		font-size: 14px;
 		line-height: calc(20 / 14);
-		text-transform: uppercase;
 		color: $primary;
 
 		&:after {
@@ -68,7 +67,7 @@
 		border-top: 1px solid #ECECEE;
 		
 		.user-name {
-			text-transform: capitalize;
+			font-size: 14px;
 		}
 
 		@include media-breakpoint-up(md) {
@@ -86,7 +85,6 @@
 		.is-logged {
 			display: flex;
 			align-items: center;
-			text-transform: uppercase;
 			padding: 16px 23px;
 
 
@@ -110,6 +108,8 @@
 			color: $black;
 			box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
 			border-radius: 4px;
+			top: 100%;
+			overflow: hidden;
 
 			&:hover {
 				color: $black;
@@ -119,8 +119,8 @@
 				a {
 					display: block;
 					color: inherit;
-					padding: 8px 10px 8px 30px;
-					transition: .3s all;
+					padding: 8px 10px 8px 36px;
+					transition: .3s all ease-in-out;
 					text-decoration: none;
 
 					&:hover {
@@ -157,7 +157,7 @@
 
 				i, .img {
 					width: 25px;
-					margin-right: 18px;
+					margin-right: 17px;
 					text-align: left;
 					font-size: 18px;
 				}
@@ -177,7 +177,7 @@
 
 	.link {
 		display: block;
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 14px;
@@ -238,6 +238,10 @@
 		padding: 0;
 		border-radius: 0;
 		transition: .4s all;
+		top: 100%;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+		border-radius: 4px;
+		overflow: hidden;
 
 		&:hover {
 			color: $primary;
@@ -269,16 +273,17 @@
 			label {
 				display: flex;
 				align-items: center;
-				text-transform: uppercase;
 				cursor: pointer;
-				padding: 14px 26px;
+				padding: 8px 26px;
+				font-size: 14px;
+				font-weight: 600;
 
 				span {
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					min-width: 20px;
-					min-height: 20px;
+					min-width: 18px;
+					min-height: 18px;
 					background: $white;
 					border: 1px solid $primary;
 					border-radius: 50%;
@@ -292,13 +297,28 @@
 					}
 				}
 			}
+
 		}
 	}
+
+	.dropdown-item{
+		color: #000;
+		transition: .3s all ease-in-out;
+
+
+		&:hover{
+			color: #ffffff;
+			background-color: #4090e7;
+			transition: .3s all ease-in-out;
+		}
+	}
+
+
 
 	.item-text-icon {
 		display: flex;
 		align-items: center;
-		font-size: 16px;
+		font-size: 14px;
 		padding: 0 21px;
 		border-left: 1px solid #ececee;
 
@@ -318,8 +338,8 @@
 
 .navbar-toggler {
 	position: relative;
-    width: 24px;
-    height: 18px;
+    width: 20px;
+    height: 14px;
 	padding: 0;
 	z-index: 1;
 	border: 0;
@@ -342,6 +362,7 @@
 		content: "";
 		height: 2px;
 		background-color: $primary;
+		border-radius: 4px;
 	}
 
 	&:after {
@@ -366,8 +387,9 @@
 	border-right: 1px solid #ececee;
 
 	@include media-breakpoint-up(md) {
-		padding: 0 20px 0 35px;
+		padding: 0 14px 0 35px;
 		border-left: 0;
 		border-right: transparent;
 	}
 }
+
